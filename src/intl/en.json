@@ -1,7 +1,22 @@
 {
-  "home_title": "Welcome!",
-  "opa": "opa321",
-  "ups": {
-    "opala": "look out!"
+  "pages": {
+    "home": {
+      "title": "Welcome!"
+    },
+    "services": {
+      "title": "Services"
+    },
+    "portfolio": {
+      "title": "Portfolio"
+    },
+    "about": {
+      "title": "About us"
+    },
+    "contact": {
+      "title": "Contact us"
+    },
+    "404": {
+      "title": "Page not found!"
+    }
   }
 }

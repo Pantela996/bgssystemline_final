@@ -3,10 +3,17 @@ module.exports = {
     title: `BGS SYSTEM LINE`,
     description: `BGS SYSTEM LINE Description`, //TODO
     author: `@gatsbyjs`, //TODO
-    siteUrl: `bice popunjeno`, //TODO
+    siteUrl: `https://www.bgssystemline.com/`, //TODO
   },
   plugins: [
+    `gatsby-plugin-material-ui`, // https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-material-ui-components
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/layout/index.ts`),
+      },
+    },
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -17,20 +24,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`, //TODO
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-      },
-    },
     {
       resolve: `gatsby-plugin-react-intl`,
       options: {
@@ -50,8 +43,22 @@ module.exports = {
         fallbackLanguage: `en`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    // allows users to add your site to their home screen
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `GatsbyJS //TODO`,
+        short_name: `GJS //TODO`,
+        start_url: `/`,
+        background_color: `#663399`, //TODO
+        theme_color: `#a2466c`, //TODO
+        // This will impact how browsers show your PWA/website
+        // https://css-tricks.com/meta-theme-color-and-trickery/
+        // theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    `gatsby-plugin-offline`,
   ],
 };

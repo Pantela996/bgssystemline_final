@@ -5,3 +5,8 @@
  */
 
 // You can delete this file if you're not using it
+
+"gatsby-plugin-layout";
+exports.shouldUpdateScroll = () => {
+  return false;
+};
