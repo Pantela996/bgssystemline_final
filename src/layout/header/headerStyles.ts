@@ -174,6 +174,7 @@ export const Nav = styled("nav")(({ theme }) => ({
 
 export const hamburgerClass = "hamburger";
 export const hamburgerOpenClass = "hamburger--open";
+const hamburgerTransitionDur = "400ms";
 const burgerLineHeight = 4;
 export const MobileMenuBtn = styled(Button)(({ theme }) => ({
   display: "flex",
@@ -188,7 +189,7 @@ export const MobileMenuBtn = styled(Button)(({ theme }) => ({
     height: burgerLineHeight,
     overflow: "visible",
     backgroundColor: "white", //theme.palette.textDark,
-    transition: "background-color 200ms",
+    transition: `background-color ${hamburgerTransitionDur}, transform ${hamburgerTransitionDur}`,
     "&::before, &::after": {
       position: "absolute",
       content: '""',
@@ -198,22 +199,26 @@ export const MobileMenuBtn = styled(Button)(({ theme }) => ({
       right: 0,
       width: "100%",
       height: "100%",
-      transition: "transform 200ms",
-      background: "white", //theme.palette.textDark,
+      transition: `transform ${hamburgerTransitionDur}, height ${hamburgerTransitionDur}, background-color ${hamburgerTransitionDur}`,
+      backgroundColor: "white", //theme.palette.textDark,
     },
     "&::before": {
-      transform: `translateY(-${burgerLineHeight * 2}px) rotate(0deg)`,
+      transform: `translateY(-${burgerLineHeight * 2}px)`,
     },
     "&::after": {
       transform: `translateY(${burgerLineHeight * 2}px) rotate(0deg)`,
     },
     [`&.${hamburgerOpenClass}`]: {
-      backgroundColor: "black", //theme.palette.textDark,
+      backgroundColor: theme.palette.primary.main,
+      transform: `translateY(0px) rotate(${45 * 3}deg)`,
       "&::before": {
-        transform: `translateY(0px) rotate(-45deg)`,
+        backgroundColor: theme.palette.primary.main,
+        transform: `translateY(0px) rotate(90deg)`,
       },
       "&::after": {
-        transform: `translateY(0px) rotate(45deg)`,
+        backgroundColor: theme.palette.primary.main,
+        transform: `translateY(-${burgerLineHeight}px)`,
+        height: 1,
       },
     },
   },
