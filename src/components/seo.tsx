@@ -6,9 +6,9 @@
  */
 
 import * as React from "react";
-import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
+import { useIntl } from "gatsby-plugin-react-intl";
 
 type ImageType = {
   src: string;
@@ -23,7 +23,8 @@ type SeoProps = {
   image?: ImageType;
 };
 
-function Seo({ description, meta, pageTitle }: SeoProps) {
+function Seo({ pageTitle, description = "", meta = [] }: SeoProps) {
+  const intl = useIntl();
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -38,14 +39,13 @@ function Seo({ description, meta, pageTitle }: SeoProps) {
     `
   );
 
-  const lang = "";
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: intl.locale,
       }}
       title={pageTitle}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
@@ -86,18 +86,5 @@ function Seo({ description, meta, pageTitle }: SeoProps) {
     />
   );
 }
-
-Seo.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-};
-
-Seo.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-};
 
 export default Seo;

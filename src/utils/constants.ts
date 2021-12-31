@@ -4,22 +4,22 @@ export const navLinks: {
 }[] = [
   {
     route: "/",
-    text: "home",
+    text: "pages.home.navText",
   },
   {
     route: "/services/",
-    text: "services",
+    text: "pages.services.navText",
   },
   {
     route: "/portfolio/",
-    text: "portfolio",
+    text: "pages.portfolio.navText",
   },
   {
     route: "/about/",
-    text: "about",
+    text: "pages.about.navText",
   },
   {
     route: "/contact/",
-    text: "contact",
+    text: "pages.contact.navText",
   },
 ];

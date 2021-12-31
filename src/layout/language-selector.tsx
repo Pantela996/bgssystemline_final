@@ -3,8 +3,8 @@ import { IntlContextConsumer, changeLocale } from "gatsby-plugin-react-intl";
 import { Button as ButtonMui, styled } from "@mui/material";
 
 const languageName = {
-  en: "English",
-  sr: "Српски",
+  en: "en",
+  sr: "срб",
 };
 
 const RootDiv = styled("section")(({ theme }) => ({
@@ -12,7 +12,11 @@ const RootDiv = styled("section")(({ theme }) => ({
 }));
 const Button = styled(ButtonMui)(({ theme }) => ({
   // paddingBottom: theme.spacing(1),
+  color: "white", //theme.palette.textDark,
   cursor: "pointer",
+  textTransform: "none",
+  fontWeight: "bold",
+  minWidth: 40,
 }));
 
 export default function LanguageSelector() {
@@ -27,7 +31,7 @@ export default function LanguageSelector() {
               variant="text"
               size="small"
               style={{
-                color: currentLocale === language ? `yellow` : `white`,
+                opacity: currentLocale === language ? 1 : 0.6,
               }}
             >
               {languageName[language]}

@@ -1,22 +1,110 @@
 {
+  "global": {
+    "footer": {
+      "allRightsReserved": "Сва права задржана"
+    }
+  },
   "pages": {
     "home": {
-      "title": "Добродошли!"
+      "navText": "Почетна",
+      "title": "ВОДЕЋА КОМПАНИЈА ЗА ИНТЕРНИ ДИЗАЈН У СРБИЈИ",
+      "subtitle": "TURNING YOUR INTERIOR DESIGN DREAMS INTO REALITY",
+      "slider": {
+        "button": "Discover",
+        "cards": {
+          "card1": {
+            "title": "Facade Solution",
+            "content": "When it comes to getting the best return on your investment"
+          },
+          "card2": {
+            "title": "Interior Design",
+            "content": "We bring to the table years of experience in implementing various types of interior design solutions in Qatar and abroad"
+          },
+          "card3": {
+            "title": "Old But Gold",
+            "content": "Based on the highest standards of planning and execution excellence"
+          },
+          "card4": {
+            "title": "Furniture",
+            "content": "Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world"
+          },
+          "card5": {
+            "title": "Modern Celling",
+            "content": "Translating concepts of landscape architecture into actual spaces with the highest level of professionalism is our team’s primary objective"
+          },
+          "card6": {
+            "title": "Lighting Design",
+            "content": "Many professionals in the interior design world believe that 75% of great design is attributed to great lighting design"
+          }
+        }
+      },
+      "overview": {
+        "view1": {
+          "title": "Facade Solution",
+          "content": "When it comes to getting the best return on your investment, there is simply no replacement for your designer’s experience.Our team has cumulatively designed over 1,500 hotel rooms, 780 furnished apartments, 58 restaurants, and countless other spaces.Our designers fully understand that value engineering is a sensitive issue."
+        },
+        "view2": {
+          "title": "Interior Design",
+          "content": "We bring to the table years of experience in implementing various types of interior design solutions in Serbia and abroad. We are fully aware that each project requires a unique and individualised process. By attentively listening to and immersing ourselves in our client’s vision and objectives, we are able to better fulfil their goals."
+        },
+        "view3": {
+          "title": "Furniture",
+          "content": "Materials used for implementing a project are as important as the lighting, shapes, and colors. Skillfully, we can supply any material you can think of.If we think your space needs a particular material to get the look, we make it happen. Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world."
+        },
+        "view4": {
+          "title": "Team",
+          "content": "Of the eleven core values of BGS, by far the most important is our Team. We strive to hire and maintain members with character, competence, and commitment. We see our organization as a place where people feel safe to try new things and challenge themselves without the fear of failure.Our team is made up of professionals from over 17 nationalities; an extraordinary mixing pot of far-ranging experiences and skills."
+        }
+      },
+      "portfolio": {
+        "title": "Our Portfolio",
+        "items": {
+          "item1": "Kitchen",
+          "item2": "Living Room",
+          "item3": "Bedroom",
+          "item4": "Simopolo"
+        }
+      },
+      "stats": {
+        "stat1": "Saving from our Value Engineering",
+        "stat2": "Hotel Rooms Executed",
+        "stat3": "Nationalities",
+        "stat4": "Cumulative Years of Design Experience",
+        "stat5": "Manufacturers in our Sourcing Database"
+      },
+      "servics": {
+        "title": "Our Services",
+        "items": {
+          "item1": "Facade Solution",
+          "item2": "Interior Design",
+          "item3": "Old But Gold",
+          "item4": "Furniture",
+          "item5": "Lightning Design",
+          "item6": "Modern Celling"
+        }
+      },
+      "blog": {
+        "title": "Latest from our blog"
+      }
     },
     "services": {
+      "navText": "Услуге",
       "title": "Услуге"
     },
     "portfolio": {
+      "navText": "Портфолио",
       "title": "Портфолио"
     },
     "about": {
+      "navText": "О нама",
       "title": "О нама"
     },
     "contact": {
+      "navText": "Контакт",
       "title": "Контактирајте нас"
     },
     "404": {
-      "title": "Страница није пронађена"
+      "title": "Страница није пронађена!"
     }
   }
 }
