@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby-plugin-react-intl";
 import LanguageSelector from "../language-selector";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
@@ -43,18 +44,24 @@ const Header = ({ siteTitle }: HeaderProps) => {
   return (
     <HeaderRoot>
       <Container>
-        <Typography className="site-title" variant="h5" component="h3">
-          <Link
-            to="/"
-            style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-            onClick={() => setMenuOpen(false)}
-          >
-            {siteTitle}
-          </Link>
-        </Typography>
+        <Link
+          to="/"
+          style={{
+            color: `white`,
+            textDecoration: `none`,
+          }}
+          onClick={() => setMenuOpen(false)}
+        >
+          <StaticImage
+            src="../../assets/images/logo-title.png"
+            formats={["auto", "webp", "avif"]}
+            alt="Digitarch logo"
+            layout="fixed"
+            placeholder="blurred"
+            // height={53}
+            width={200}
+          />
+        </Link>
         <Nav className={menuOpen && navOpenClass}>
           <ul>
             {navLinks.map((navLink) => (

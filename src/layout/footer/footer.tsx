@@ -24,7 +24,7 @@ const Footer = ({ siteTitle }: FooterProps) => {
     <FooterRoot>
       <Container>
         <ContentWrap>
-          <Section sx={(theme) => ({ gridArea: footerAreas.address })}>
+          <Section style={{ gridArea: footerAreas.address }}>
             <Typography
               component="h4"
               variant="h5"
@@ -41,7 +41,7 @@ const Footer = ({ siteTitle }: FooterProps) => {
               </ul>
             </Nav>
           </Section>
-          <Section sx={(theme) => ({ gridArea: footerAreas.links })}>
+          <Section style={{ gridArea: footerAreas.links }}>
             <Typography
               component="h4"
               variant="h5"
@@ -64,7 +64,7 @@ const Footer = ({ siteTitle }: FooterProps) => {
               </ul>
             </Nav>
           </Section>
-          <Section sx={(theme) => ({ gridArea: footerAreas.hours })}>
+          <Section style={{ gridArea: footerAreas.hours }}>
             <Typography
               component="h4"
               variant="h5"
@@ -74,7 +74,7 @@ const Footer = ({ siteTitle }: FooterProps) => {
             </Typography>
             <Typography>ScheduleIcon: 00-24h</Typography>
           </Section>
-          <Section sx={(theme) => ({ gridArea: footerAreas.logo })}>
+          <Section style={{ gridArea: footerAreas.logo }}>
             <LogoWrap>
               <StaticImage
                 src="../../assets/images/logo-compact.png"
@@ -82,7 +82,13 @@ const Footer = ({ siteTitle }: FooterProps) => {
                 alt="Digitarch logo"
                 layout="fullWidth"
                 placeholder="blurred"
-                height={350}
+              />
+              <StaticImage
+                src="../../assets/images/logo-compact-hr.png"
+                formats={["auto", "webp", "avif"]}
+                alt="Digitarch logo -- wide"
+                layout="fullWidth"
+                placeholder="blurred"
               />
             </LogoWrap>
           </Section>

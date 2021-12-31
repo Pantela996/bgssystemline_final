@@ -2,10 +2,6 @@ import { styled, Container as ContainerMui, Button } from "@mui/material";
 
 export const HeaderRoot = styled("header")(({ theme }) => ({
   backgroundColor: "black", //theme.palette.textDark,
-  "& .site-title": {
-    padding: "0.5rem",
-    paddingLeft: 0,
-  },
 }));
 
 const headerHeight = "80px";
@@ -27,7 +23,8 @@ export const Nav = styled("nav")(({ theme }) => ({
     right: "100%",
     width: "100%",
     bottom: 0,
-    background: theme.palette.secondary.main,
+    // background: theme.palette.secondary.main,
+    backgroundColor: "black", //theme.palette.textDark,
     transition: "transform 400ms",
     [`&.${navOpenClass}`]: {
       transform: "translateX(100%)",
