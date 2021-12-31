@@ -64,7 +64,8 @@ export const Nav = styled("nav")(({ theme }) => ({
             marginRight: theme.spacing(1.5),
             width: theme.spacing(1),
             boxShadow: `calc(${theme.spacing(0.5)}) 0 ${
-              theme.palette.secondary.main
+              // theme.palette.secondary.main
+              "black"
             }, calc(${theme.spacing(0.5)} + 2px) 0 ${
               theme.palette.primary.main
             }`,
