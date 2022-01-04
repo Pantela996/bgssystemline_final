@@ -12,7 +12,7 @@ export const Container = styled(ContainerMui)(({ theme }) => ({
   height: 80,
 }));
 
-export const rootLockedClass = "root--locked";
+export const rootLockedClass = "scroll--locked";
 export const navLinkActiveClass = "navlink--active";
 export const navOpenClass = "nav--open";
 export const Nav = styled("nav")(({ theme }) => ({
@@ -151,6 +151,7 @@ export const Nav = styled("nav")(({ theme }) => ({
           opacity: 0,
           transform: "translate(-50%, 0.5rem) scale(0.6)",
           transition: "opacity 200ms, transform 200ms",
+          pointerEvents: "none",
           background: "white", //theme.palette.textDark,
         },
         "&::after": {
@@ -163,6 +164,7 @@ export const Nav = styled("nav")(({ theme }) => ({
           opacity: 0,
           transform: "translate(-50%, 0.5rem) scale(0.6)",
           transition: "opacity 200ms, transform 200ms",
+          pointerEvents: "none",
           background: "white", //theme.palette.textDark,
         },
       },

@@ -72,7 +72,7 @@ const Footer = ({ siteTitle }: FooterProps) => {
             >
               Business Hours
             </Typography>
-            <Typography>ScheduleIcon: 00-24h</Typography>
+            <Typography>00-24h</Typography>
           </Section>
           <Section style={{ gridArea: footerAreas.logo }}>
             <LogoWrap>

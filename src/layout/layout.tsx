@@ -35,9 +35,6 @@ const Main = styled("main")(({ theme }) => ({
 }));
 
 const Layout = ({ children, location }) => {
-  const menuState = useState(false);
-  const [menuOpen] = menuState;
-
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {

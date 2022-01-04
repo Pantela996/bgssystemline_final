@@ -120,6 +120,8 @@ export const Nav = styled("nav")(({ theme }) => ({
 export const FooterOfFooter = styled("footer")(({ theme }) => ({
   color: theme.palette.primary.main,
   textAlign: "center",
-  paddingTop: theme.spacing(4),
-  paddingBottom: theme.spacing(1),
+  marginTop: theme.spacing(4),
+  paddingTop: theme.spacing(3),
+  paddingBottom: theme.spacing(3),
+  borderTop: `0.25rem double ${theme.palette.primary.main}`,
 }));

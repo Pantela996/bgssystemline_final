@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     title: `DIGITARCH`,
@@ -6,6 +8,15 @@ module.exports = {
     siteUrl: `https://www.bgssystemline.com/`, //TODO
   },
   plugins: [
+    {
+      resolve: "gatsby-source-shopify",
+      options: {
+        password: process.env.GATSBY_SHOPIFY_SHOP_PASSWORD,
+        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
+        // shopifyConnections: ['orders', 'collections', 'locations'],
+        salesChannel: "digitarch",
+      },
+    },
     `gatsby-plugin-material-ui`, // https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-material-ui-components
     `gatsby-plugin-react-helmet`,
     {
@@ -14,6 +25,7 @@ module.exports = {
         component: require.resolve(`./src/layout/index.ts`),
       },
     },
+    `gatsby-plugin-graphql-codegen`,
     `gatsby-plugin-image`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -56,7 +68,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/digitarch-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,

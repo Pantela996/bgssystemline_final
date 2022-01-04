@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby-plugin-react-intl";
 import LanguageSelector from "../language-selector";
@@ -18,11 +17,7 @@ import {
   rootLockedClass,
 } from "./headerStyles";
 
-interface HeaderProps {
-  siteTitle: string;
-}
-
-const Header = ({ siteTitle }: HeaderProps) => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const theme = useTheme();
 
@@ -79,7 +74,7 @@ const Header = ({ siteTitle }: HeaderProps) => {
         </Nav>
 
         <LanguageSelector />
-        <MobileMenuBtn onClick={() => setMenuOpen(!menuOpen)}>
+        <MobileMenuBtn onClick={() => setMenuOpen((prevState) => !prevState)}>
           <div
             className={`${hamburgerClass} ${
               menuOpen ? hamburgerOpenClass : ""
@@ -89,14 +84,6 @@ const Header = ({ siteTitle }: HeaderProps) => {
       </Container>
     </HeaderRoot>
   );
-};
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
 };
 
 export default Header;
