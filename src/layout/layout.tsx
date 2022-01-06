@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 import { TransitionProvider, TransitionViews } from "gatsby-plugin-transitions";
-
 import "./layout.css";
 import { themeDefault } from "./layoutThemes";
 import { ThemeProvider } from "@mui/material/styles";
@@ -30,22 +28,10 @@ const WrapperMain = styled(Box)(({ theme }) => ({
 
 const Main = styled("main")(({ theme }) => ({
   minHeight: "100%",
-  transition: "height 300ms",
   paddingBottom: theme.spacing(7),
 }));
 
 const Layout = ({ children, location }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-  const siteTitle = data.site.siteMetadata?.title || "";
-
   return (
     <ThemeProvider theme={themeDefault}>
       <TransitionProvider
@@ -77,12 +63,12 @@ const Layout = ({ children, location }) => {
         }}
       >
         <RootDiv>
-          <Header siteTitle={siteTitle} />
+          <Header />
           <WrapperMain>
             <Main>
               <TransitionViews>{children}</TransitionViews>
             </Main>
-            <Footer siteTitle={siteTitle} />
+            <Footer />
           </WrapperMain>
         </RootDiv>
       </TransitionProvider>

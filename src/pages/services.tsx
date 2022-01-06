@@ -1,7 +1,7 @@
 import React from "react";
 import Seo from "../components/seo";
 import { Container } from "@mui/material";
-import t from "../utils/translate";
+import t from "../components/translate";
 
 export default function services() {
   return (

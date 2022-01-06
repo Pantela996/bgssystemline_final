@@ -1,7 +1,8 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { useStaticQuery, graphql } from "gatsby";
 import { Container, Typography } from "@mui/material";
-import t from "../../utils/translate";
+import t from "../../components/translate";
 import { Link } from "gatsby-plugin-react-intl";
 import { navLinks } from "../../utils/constants";
 import {
@@ -16,10 +17,17 @@ import {
   SectionTitleClass,
 } from "./footerStyles";
 
-interface FooterProps {
-  siteTitle: string;
-}
-const Footer = ({ siteTitle }: FooterProps) => {
+const Footer = () => {
+  const data = useStaticQuery(graphql`
+    query SiteTitleQuery {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `);
+  const siteTitle = data.site.siteMetadata?.title || "";
   return (
     <FooterRoot>
       <Container>

@@ -2,7 +2,7 @@ import * as React from "react";
 import { Link } from "gatsby-plugin-react-intl";
 import { Container } from "@mui/material";
 
-import t from "../utils/translate";
+import t from "../components/translate";
 import Seo from "../components/seo";
 
 const IndexPage = () => {

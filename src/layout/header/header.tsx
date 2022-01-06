@@ -5,7 +5,7 @@ import LanguageSelector from "../language-selector";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { navLinks, shopRoute } from "../../utils/constants";
-import t from "../../utils/translate";
+import t from "../../components/translate";
 import {
   Container,
   hamburgerClass,

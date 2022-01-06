@@ -1,4 +1,4 @@
-import { styled, Container } from "@mui/material";
+import { styled } from "@mui/material";
 
 export const FooterRoot = styled("footer")(({ theme }) => ({
   backgroundColor: "black", // use theme color
