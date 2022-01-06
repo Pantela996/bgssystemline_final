@@ -103,6 +103,10 @@
       "navText": "Contact",
       "title": "Contact us"
     },
+    "shop": {
+      "navText": "Shop",
+      "title": "Shop title"
+    },
     "404": {
       "title": "Page not found!"
     }

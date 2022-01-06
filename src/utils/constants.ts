@@ -1,3 +1,4 @@
+export const shopRoute = "/shop/";
 export const navLinks: {
   route: string;
   text: string;
@@ -21,5 +22,9 @@ export const navLinks: {
   {
     route: "/contact/",
     text: "pages.contact.navText",
+  },
+  {
+    route: shopRoute,
+    text: "pages.shop.navText",
   },
 ];
