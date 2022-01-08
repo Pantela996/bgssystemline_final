@@ -3,7 +3,7 @@ import Seo from "../components/seo";
 import { Container } from "@mui/material";
 import t from "../components/translate";
 
-export default function about() {
+export default function About() {
   return (
     <>
       <Seo pageTitle="About" />

@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby-plugin-react-intl";
-import LanguageSelector from "../language-selector";
+import LanguageSelector from "./language-selector";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { navLinks, shopRoute } from "../../utils/constants";
+import { navLinks } from "../../utils/constants";
+import { shopRoute } from "../../utils/constantsPlain";
 import t from "../../components/translate";
 import {
   Container,

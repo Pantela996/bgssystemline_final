@@ -2,10 +2,10 @@ import React from "react";
 import { IntlContextConsumer, changeLocale } from "gatsby-plugin-react-intl";
 import { Button as ButtonMui, styled } from "@mui/material";
 
-const languageName = {
+const languageNames = {
   en: "en",
   sr: "срб",
-};
+} as const;
 
 const RootDiv = styled("section")(({ theme }) => ({
   // paddingBottom: theme.spacing(1),
@@ -34,7 +34,7 @@ export default function LanguageSelector() {
                 opacity: currentLocale === language ? 1 : 0.6,
               }}
             >
-              {languageName[language]}
+              {languageNames[language]}
             </Button>
           ))
         }

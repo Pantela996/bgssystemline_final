@@ -1,4 +1,5 @@
-export const shopRoute = "/shop/";
+import { shopRoute } from "./constantsPlain";
+
 export const navLinks: {
   route: string;
   text: string;

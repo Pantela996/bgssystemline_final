@@ -15,6 +15,9 @@ module.exports = {
         storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
         // shopifyConnections: ['orders', 'collections', 'locations'],
         salesChannel: "digitarch",
+        // apiVersion: "2022-01",
+        // verbose: true,
+        // languages: ["en", "sr"],
       },
     },
     `gatsby-plugin-material-ui`, // https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-material-ui-components

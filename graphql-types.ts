@@ -6531,7 +6531,7 @@ export type SiteTitleQueryQuery = { site?: { siteMetadata?: { title?: string | n
 export type GetShopItemsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetShopItemsQuery = { allShopifyProduct: { nodes: Array<{ title?: string | null | undefined, handle?: string | null | undefined, shopifyId?: string | null | undefined, description?: string | null | undefined, priceRangeV2?: { maxVariantPrice?: { amount?: string | null | undefined, currencyCode?: string | null | undefined } | null | undefined } | null | undefined, variants?: Array<{ shopifyId?: string | null | undefined } | null | undefined> | null | undefined, images?: Array<{ src?: string | null | undefined } | null | undefined> | null | undefined }> } };
+export type GetShopItemsQuery = { allShopifyProduct: { totalCount: number, edges: Array<{ node: { id: string, title?: string | null | undefined, description?: string | null | undefined, handle?: string | null | undefined, shopifyId?: string | null | undefined, priceRangeV2?: { maxVariantPrice?: { amount?: string | null | undefined, currencyCode?: string | null | undefined } | null | undefined } | null | undefined, images?: Array<{ src?: string | null | undefined } | null | undefined> | null | undefined, variants?: Array<{ shopifyId?: string | null | undefined } | null | undefined> | null | undefined } }> } };
 
 export type GatsbyImageSharpFixedFragment = { base64?: string | null | undefined, width: number, height: number, src: string, srcSet: string };
 

@@ -3,7 +3,7 @@ import Seo from "../components/seo";
 import { Container } from "@mui/material";
 import t from "../components/translate";
 
-export default function portfolio() {
+export default function Portfolio() {
   return (
     <div>
       <Seo pageTitle="Portfolio" />
