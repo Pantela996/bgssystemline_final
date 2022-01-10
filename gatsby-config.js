@@ -13,11 +13,7 @@ module.exports = {
       options: {
         password: process.env.GATSBY_SHOPIFY_SHOP_PASSWORD,
         storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
-        // shopifyConnections: ['orders', 'collections', 'locations'],
-        salesChannel: "digitarch",
-        // apiVersion: "2022-01",
-        // verbose: true,
-        // languages: ["en", "sr"],
+        accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
       },
     },
     `gatsby-plugin-material-ui`, // https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-material-ui-components
@@ -42,19 +38,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-react-intl`,
       options: {
-        // language JSON resource path
         path: `${__dirname}/src/intl`,
-        // supported language
         languages: [`en`, `sr`],
-        // language file path
         defaultLanguage: `en`,
         // option to redirect to `/ko` when connecting `/`
         redirect: true,
-        // option for use / as defaultLangauge root path. if your defaultLanguage is `ko`, when `redirectDefaultLanguageToRoot` is true, then it will not generate `/ko/xxx` pages, instead of `/xxx`
         redirectDefaultLanguageToRoot: true,
         // paths that you don't want to genereate locale pages, example: ["/dashboard/","/test/**"], string format is from micromatch https://github.com/micromatch/micromatch
         ignoredPaths: [],
-        // option to fallback to the defined language instead of the `defaultLanguage` if the user langauge is not in the list
         fallbackLanguage: `en`,
       },
     },
@@ -71,7 +62,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/digitarch-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/logo/digitarch-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,

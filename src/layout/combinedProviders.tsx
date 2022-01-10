@@ -20,9 +20,7 @@ const CombinedProviders = ({ children, location }) => {
             friction: 20,
             clamp: true,
           },
-          onRest: () => {
-            // console.log("Hello, World!");
-          },
+          // onRest: () => {},
         }}
         usual={{
           opacity: 1,

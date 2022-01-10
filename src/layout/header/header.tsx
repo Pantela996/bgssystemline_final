@@ -42,16 +42,9 @@ const Header = () => {
   return (
     <HeaderRoot>
       <Container>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-          onClick={() => setMenuOpen(false)}
-        >
+        <Link to="/" onClick={() => setMenuOpen(false)}>
           <StaticImage
-            src="../../assets/images/logo-title.png"
+            src="../../assets/images/logo/logo-title.png"
             formats={["auto", "webp", "avif"]}
             alt="Digitarch logo"
             layout="fixed"

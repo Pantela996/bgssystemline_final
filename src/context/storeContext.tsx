@@ -110,14 +110,9 @@ export const StoreProvider = ({ children }) => {
 
       let updatedCart = [];
       if (cart.length > 0) {
-        console.log("variantId", variantId);
-        const itemIsInCart = cart.find((item) => {
-          console.log(
-            "item.product.variants[0]?.shopifyId",
-            item.product.variants[0]?.shopifyId
-          );
-          return item.product.variants[0]?.shopifyId === variantId;
-        });
+        const itemIsInCart = cart.find(
+          (item) => item.product.variants[0]?.shopifyId === variantId
+        );
 
         if (itemIsInCart) {
           const newProduct: CartItem = {

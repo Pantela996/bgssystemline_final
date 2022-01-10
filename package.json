@@ -24,7 +24,6 @@
     "gatsby-plugin-transitions": "^2.1.7",
     "gatsby-source-filesystem": "^4.3.0",
     "gatsby-source-shopify": "^6.4.0",
-    "gatsby-source-shopify-translated": "^1.0.12",
     "gatsby-transformer-sharp": "^4.3.0",
     "isomorphic-fetch": "^3.0.0",
     "prop-types": "^15.7.2",

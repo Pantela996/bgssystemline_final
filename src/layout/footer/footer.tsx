@@ -85,14 +85,14 @@ const Footer = () => {
           <Section style={{ gridArea: footerAreas.logo }}>
             <LogoWrap>
               <StaticImage
-                src="../../assets/images/logo-compact.png"
+                src="../../assets/images/logo/logo-compact.png"
                 formats={["auto", "webp", "avif"]}
                 alt="Digitarch logo"
                 layout="fullWidth"
                 placeholder="blurred"
               />
               <StaticImage
-                src="../../assets/images/logo-compact-hr.png"
+                src="../../assets/images/logo/logo-compact-hr.png"
                 formats={["auto", "webp", "avif"]}
                 alt="Digitarch logo -- wide"
                 layout="fullWidth"
