@@ -9,11 +9,18 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-netlify`,
+      options: {
+        headers: {
+          "/sr/*": ["Accept-Language: sr"],
+        },
+      },
+    },
+    {
       resolve: "gatsby-source-shopify",
       options: {
         password: process.env.GATSBY_SHOPIFY_SHOP_PASSWORD,
         storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
-        accessToken: process.env.GATSBY_SHOPIFY_ACCESS_TOKEN,
       },
     },
     `gatsby-plugin-material-ui`, // https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-material-ui-components
@@ -45,7 +52,7 @@ module.exports = {
         redirect: true,
         redirectDefaultLanguageToRoot: true,
         // paths that you don't want to genereate locale pages, example: ["/dashboard/","/test/**"], string format is from micromatch https://github.com/micromatch/micromatch
-        ignoredPaths: [],
+        // ignoredPaths: [],
         fallbackLanguage: `en`,
       },
     },

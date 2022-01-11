@@ -14,12 +14,13 @@ export default function ProductPage({
     <>
       <Seo pageTitle="Shop" />
       <Container>
-        <img src={product.images[0].src} alt="" width="500px" />
+        {/* <img src={product.images[0].src} alt="" width="500px" /> */}
         <h5>
-          {product.title} <br /> {product.priceRangeV2.maxVariantPrice.amount}
-          {product.priceRangeV2.maxVariantPrice.currencyCode}
+          {product.title}
+          {/* <br /> {product.priceRangeV2.maxVariantPrice.amount}
+          {product.priceRangeV2.maxVariantPrice.currencyCode} */}
         </h5>
-        <p>{product.description}</p>
+        {/* <p>{product.description}</p> */}
       </Container>
     </>
   );
