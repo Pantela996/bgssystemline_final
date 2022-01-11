@@ -7,7 +7,7 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Header from "./header";
 import Footer from "./footer";
-import CombinedProviders from "./CombinedProviders";
+import CombinedProviders from "./combinedProviders";
 
 const RootDiv = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,
