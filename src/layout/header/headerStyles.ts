@@ -4,12 +4,12 @@ export const HeaderRoot = styled("header")(({ theme }) => ({
   backgroundColor: "black", //theme.palette.textDark,
 }));
 
-const headerHeight = "80px";
+const headerHeight = "90px";
 export const Container = styled(ContainerMui)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-  height: 80,
+  height: headerHeight,
 }));
 
 export const rootLockedClass = "scroll--locked";

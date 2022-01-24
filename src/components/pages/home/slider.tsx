@@ -4,6 +4,7 @@ import { Link } from "gatsby-plugin-react-intl";
 import { styled } from "@mui/material";
 import slug from "slug";
 // import { graphql, useStaticQuery } from "gatsby";
+import { Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
@@ -77,6 +78,10 @@ const SliderContainer = styled("div")(({ theme }) => ({
   },
 }));
 
+const TextContainer = styled(Container)(({ theme }) => ({
+  marginBottom: 40,
+}));
+
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 export default function Slider() {
@@ -122,11 +127,13 @@ export default function Slider() {
             // placeholder="blurred"
           />
         </div> */}
-            <div>
-              <h3>{slide.title}</h3>
-              <p>{slide.text}</p>
-              <Link to={`/services/${slug(slide.title)}`}>Discover</Link>
-            </div>
+            <TextContainer>
+              <div>
+                <h3>{slide.title}</h3>
+                <p>{slide.text}</p>
+                <Link to={`/services/${slug(slide.title)}`}>Discover</Link>
+              </div>
+            </TextContainer>
           </SwiperSlide>
         ))}
 

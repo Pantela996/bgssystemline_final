@@ -41,12 +41,12 @@ const Header = () => {
       <Container>
         <Link to="/" onClick={() => setMenuOpen(false)}>
           <StaticImage
-            src="../../assets/images/logo/logo-title.png"
+            src="../../assets/images/logo/bgs-logo.svg"
             formats={["auto", "webp", "avif"]}
-            alt="Digitarch logo"
+            alt="BGS logo"
             layout="fixed"
             placeholder="blurred"
-            width={200}
+            width={70}
           />
         </Link>
         <Nav className={menuOpen && navOpenClass}>

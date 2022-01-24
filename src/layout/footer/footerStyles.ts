@@ -44,16 +44,7 @@ export const Section = styled("section")(({ theme }) => ({
 export const LogoWrap = styled("div")(({ theme }) => ({
   "& > div": {
     margin: "0 auto",
-    maxWidth: 320,
-    "&:nth-of-type(2)": {
-      display: "none",
-    },
-    [theme.breakpoints.between("sm", "lg")]: {
-      display: "none",
-      "&:nth-of-type(2)": {
-        display: "block",
-      },
-    },
+    maxWidth: 180,
   },
 }));
 

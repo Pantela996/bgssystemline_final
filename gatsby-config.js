@@ -2,9 +2,9 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: `DIGITARCH`,
-    description: `DIGITARCH Description`, //TODO
-    author: `@gatsbyjs`, //TODO
+    title: `BGS SYSTEM LINE`,
+    description: `BGS Description`, //TODO
+    author: `milos & milos`, //TODO
     siteUrl: `https://www.bgssystemline.com/`, //TODO
   },
   plugins: [
@@ -54,7 +54,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/assets/images/logo/digitarch-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/logo/bgs-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-offline`,

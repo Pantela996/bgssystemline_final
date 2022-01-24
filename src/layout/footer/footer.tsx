@@ -80,21 +80,14 @@ const Footer = () => {
             >
               Business Hours
             </Typography>
-            <Typography>00-24h</Typography>
+            <Typography>09-17h</Typography>
           </Section>
           <Section style={{ gridArea: footerAreas.logo }}>
             <LogoWrap>
               <StaticImage
-                src="../../assets/images/logo/logo-compact.png"
+                src="../../assets/images/logo/bgs-logo.svg"
                 formats={["auto", "webp", "avif"]}
-                alt="Digitarch logo"
-                layout="fullWidth"
-                placeholder="blurred"
-              />
-              <StaticImage
-                src="../../assets/images/logo/logo-compact-hr.png"
-                formats={["auto", "webp", "avif"]}
-                alt="Digitarch logo -- wide"
+                alt="BGS logo"
                 layout="fullWidth"
                 placeholder="blurred"
               />
