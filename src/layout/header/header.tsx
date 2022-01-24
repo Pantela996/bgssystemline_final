@@ -4,7 +4,8 @@ import { Link } from "gatsby-plugin-react-intl";
 import LanguageSelector from "./language-selector";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
 import { navLinks } from "../../utils/constants";
-import t from "../../components/translate";
+// @ts-ignore
+import t from "@translate";
 import {
   Container,
   hamburgerClass,

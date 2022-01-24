@@ -2904,6 +2904,11 @@ export type ImageSharpSortInput = {
   order?: InputMaybe<Array<InputMaybe<SortOrderEnum>>>;
 };
 
+export type GetSliderImagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetSliderImagesQuery = { allFile: { edges: Array<{ node: { name: string, childImageSharp?: { gatsbyImageData: any } | null | undefined } }> } };
+
 export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 

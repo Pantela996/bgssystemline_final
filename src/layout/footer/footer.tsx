@@ -2,7 +2,8 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import { Container, Typography } from "@mui/material";
-import t from "../../components/translate";
+// @ts-ignore
+import t from "@translate";
 import { Link } from "gatsby-plugin-react-intl";
 import { navLinks } from "../../utils/constants";
 import {

@@ -2,12 +2,26 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: `BGS SYSTEM LINE`,
+    title: `BGS System Line`,
     description: `BGS Description`, //TODO
     author: `milos & milos`, //TODO
     siteUrl: `https://www.bgssystemline.com/`, //TODO
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-module-resolver",
+      options: {
+        root: "./src", // <- will be used as a root dir
+        aliases: {
+          "@components": "./components", // <- will become ./src/components
+          "@translate": "./components/translate",
+          // static: {
+          //   root: "./public", // <- will used as this alias' root dir
+          //   alias: "./static", // <- will become ./public/static
+          // },
+        },
+      },
+    },
     `gatsby-plugin-material-ui`, // https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-material-ui-components
     `gatsby-plugin-react-helmet`,
     {

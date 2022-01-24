@@ -1,64 +1,35 @@
 import React from "react";
 import { Link } from "gatsby-plugin-react-intl";
-// import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage } from "gatsby-plugin-image";
 import { styled } from "@mui/material";
-import slug from "slug";
-// import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery } from "gatsby";
 import { Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { GetSliderImagesQuery } from "../../../../graphql-types";
+// @ts-ignore
+import t from "@translate";
 
-type SlideDataType = {
-  title: string;
-  text: string;
-  src: string;
-};
-
-const sliderData: SlideDataType[] = [
-  {
-    title: "Facade Solution",
-    text: "When it comes to getting the best return on your investment",
-    src: "../assets/images/slider/facade-solution.jpg",
-  },
-  {
-    title: "Interior Design",
-    text: "We bring to the table years of experience in implementing various types of interior design solutions in Qatar and abroad",
-    src: "../assets/images/slider/interior-design.jpg",
-  },
-  {
-    title: "Old But Gold",
-    text: "Based on the highest standards of planning and execution excellence",
-    src: "../assets/images/slider/old-but-gold.jpg",
-  },
-  {
-    title: "Furniture",
-    text: "Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world",
-    src: "../assets/images/slider/furniture.jpg",
-  },
-  {
-    title: "Modern Celling",
-    text: "Translating concepts of landscape architecture into actual spaces with the highest level of professionalism is our team’s primary objective",
-    src: "../assets/images/slider/modern-celling.jpg",
-  },
-  {
-    title: "Lighting Design",
-    text: "Many professionals in the interior design world believe that 75% of great design is attributed to great lighting design",
-    src: "../assets/images/slider/lighting-design.jpg",
-  },
-  {
-    title: "Wall Cladding",
-    text: "The inspiration for our latest creations comes from purely geometric to the most fluid organic forms, touching upon everything in between",
-    src: "../assets/images/slider/wall-cladding.png",
-  },
-];
+const sliderImgNames = [
+  "facade-solution",
+  "interior-design",
+  "old-but-gold",
+  "furniture",
+  "modern-celling",
+  "lighting-design",
+  "wall-cladding",
+] as const;
+// NAME: must be the same as route that it's link is pointing to
+// ORDER: must be the same as is in translations
 
 const swiperPaginationClass = "swiper-pagination";
 const SliderContainer = styled("div")(({ theme }) => ({
   maxWidth: "100%",
   overflowX: "hidden",
+  backgroundColor: "black", //theme.palette.textDark,
 
   [`& .${swiperPaginationClass}`]: {
     ".swiper-pagination-bullet": {
@@ -78,31 +49,67 @@ const SliderContainer = styled("div")(({ theme }) => ({
   },
 }));
 
-const TextContainer = styled(Container)(({ theme }) => ({
-  marginBottom: 40,
-}));
-
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
+const containerWrapClass = "slide-container-wrap";
+const textContainerClass = "slide-text-container";
+const imgContainerClass = "slide-img-container";
+const SlideContent = styled("div")(({ theme }) => ({
+  position: "relative",
+  width: "100%",
+  [`& .${imgContainerClass}`]: {
+    height: "80vh",
+    width: "100%",
+  },
+  [`& .${containerWrapClass}`]: {
+    position: "absolute",
+    bottom: 0,
+    top: 0,
+    left: 0,
+    right: 0,
+  },
+  [`& .${textContainerClass}`]: {
+    display: "flex",
+    alignItems: "center",
+    height: "100%",
+  },
+}));
+
+const SlideCard = styled("div")(({ theme }) => ({
+  position: "relative",
+  background: `rgba(255,255,255,0.7)`,
+  padding: theme.spacing(3),
+  maxWidth: 330,
+}));
+
 export default function Slider() {
-  // const logoQuery = graphql`
-  //   query headerLogoQuery {
-  //     file(name: { eq: "logo-title" }) {
-  //       childImageSharp {
-  //         fixed(traceSVG: { blackOnWhite: false }) {
-  //           src
-  //         }
-  //       }
-  //     }
-  //   }
-  // `;
-  // const data = useStaticQuery(logoQuery);
+  const data = useStaticQuery<GetSliderImagesQuery>(graphql`
+    query getSliderImages {
+      allFile(filter: { relativeDirectory: { eq: "slider" } }) {
+        edges {
+          node {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+            }
+            name
+          }
+        }
+      }
+    }
+  `);
+
+  const useImgWithName = (slideTitleSlug: string) => {
+    const targetEdge = data.allFile.edges.find(
+      (edge) => edge.node.name === slideTitleSlug
+    );
+    return targetEdge.node.childImageSharp.gatsbyImageData;
+  };
 
   return (
     <SliderContainer>
       <Swiper
         centeredSlides={true}
-        spaceBetween={30}
+        spaceBetween={33}
         speed={1200}
         autoplay={{
           delay: 5500,
@@ -117,23 +124,32 @@ export default function Slider() {
             `<span class="${className}"></span>`,
         }}
       >
-        {sliderData.map((slide) => (
-          <SwiperSlide key={slug(slide.title)}>
-            {/* <div>
-          <GatsbyImage 
-            image={image} 
-            // formats={["auto", "webp", "avif"]}
-            alt={`Demo image for: ${slide.title}`}
-            // placeholder="blurred"
-          />
-        </div> */}
-            <TextContainer>
-              <div>
-                <h3>{slide.title}</h3>
-                <p>{slide.text}</p>
-                <Link to={`/services/${slug(slide.title)}`}>Discover</Link>
+        {sliderImgNames.map((imgName, imgIndex) => (
+          <SwiperSlide key={imgName}>
+            <SlideContent>
+              <GatsbyImage
+                className={imgContainerClass}
+                image={useImgWithName(imgName)}
+                // formats={["auto", "webp", "avif"]}
+                alt={imgName}
+                // placeholder="blurred"
+                objectFit="cover"
+                objectPosition="50% 65%"
+              />
+              <div className={containerWrapClass}>
+                <Container className={textContainerClass}>
+                  <SlideCard>
+                    <h3>
+                      {t(`pages.home.slider.cards.card${imgIndex}.title`)}
+                    </h3>
+                    <p>
+                      {t(`pages.home.slider.cards.card${imgIndex}.content`)}
+                    </p>
+                    <Link to={`/services/${imgName}`}>Discover</Link>
+                  </SlideCard>
+                </Container>
               </div>
-            </TextContainer>
+            </SlideContent>
           </SwiperSlide>
         ))}
 

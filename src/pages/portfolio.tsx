@@ -1,7 +1,8 @@
 import React from "react";
 import Seo from "../components/seo";
 import { Container } from "@mui/material";
-import t from "../components/translate";
+// @ts-ignore
+import t from "@translate";
 
 export default function Portfolio() {
   return (

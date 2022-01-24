@@ -12,29 +12,33 @@
       "slider": {
         "button": "Discover",
         "cards": {
-          "card1": {
+          "card0": {
             "title": "Facade Solution",
             "content": "When it comes to getting the best return on your investment"
           },
-          "card2": {
+          "card1": {
             "title": "Interior Design",
             "content": "We bring to the table years of experience in implementing various types of interior design solutions in Qatar and abroad"
           },
-          "card3": {
+          "card2": {
             "title": "Old But Gold",
             "content": "Based on the highest standards of planning and execution excellence"
           },
-          "card4": {
+          "card3": {
             "title": "Furniture",
             "content": "Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world"
           },
-          "card5": {
+          "card4": {
             "title": "Modern Celling",
             "content": "Translating concepts of landscape architecture into actual spaces with the highest level of professionalism is our team’s primary objective"
           },
-          "card6": {
+          "card5": {
             "title": "Lighting Design",
             "content": "Many professionals in the interior design world believe that 75% of great design is attributed to great lighting design"
+          },
+          "card6": {
+            "title": "Wall Cladding",
+            "content": "The inspiration for our latest creations comes from purely geometric to the most fluid organic forms, touching upon everything in between"
           }
         }
       },
@@ -104,7 +108,8 @@
       "title": "Contact us"
     },
     "404": {
-      "title": "Page not found!"
+      "title": "Page not found!",
+      "message": "You just hit a route that doesn&#39;t exist... the sadness."
     }
   }
 }

@@ -610,6 +610,6 @@ pre tt:after {
   }
 }
 
-body.root--locked {
+body.scroll--locked {
   overflow: hidden;
 }

@@ -3,25 +3,27 @@ interface INavLink {
   text: string;
 }
 
+const getPageNavTStringFor = (page: string) => `pages.${page}.navText`;
+
 export const navLinks: INavLink[] = [
   {
     route: "/",
-    text: "pages.home.navText",
+    text: getPageNavTStringFor("home"),
   },
   {
     route: "/services/",
-    text: "pages.services.navText",
+    text: getPageNavTStringFor("services"),
   },
   {
     route: "/portfolio/",
-    text: "pages.portfolio.navText",
+    text: getPageNavTStringFor("portfolio"),
   },
   {
     route: "/about/",
-    text: "pages.about.navText",
+    text: getPageNavTStringFor("about"),
   },
   {
     route: "/contact/",
-    text: "pages.contact.navText",
+    text: getPageNavTStringFor("contact"),
   },
 ];

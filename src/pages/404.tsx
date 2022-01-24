@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Container } from "@mui/material";
-import t from "../components/translate";
+// @ts-ignore
+import t from "@translate";
 import Seo from "../components/seo";
 
 const NotFoundPage = () => (
@@ -8,7 +9,7 @@ const NotFoundPage = () => (
     <Seo pageTitle="404: Not found" />
     <Container>
       <h1>404: {t("pages.404.title")}</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <p>{t("pages.404.message")}</p>
     </Container>
   </>
 );
