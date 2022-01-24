@@ -1,9 +1,9 @@
-import { shopRoute } from "./constantsPlain";
-
-export const navLinks: {
+interface INavLink {
   route: string;
   text: string;
-}[] = [
+}
+
+export const navLinks: INavLink[] = [
   {
     route: "/",
     text: "pages.home.navText",
@@ -23,9 +23,5 @@ export const navLinks: {
   {
     route: "/contact/",
     text: "pages.contact.navText",
-  },
-  {
-    route: shopRoute,
-    text: "pages.shop.navText",
   },
 ];

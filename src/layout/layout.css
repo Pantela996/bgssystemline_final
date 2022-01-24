@@ -613,6 +613,3 @@ pre tt:after {
 body.root--locked {
   overflow: hidden;
 }
-/* body.root--locked * {
-  overflow: hidden;
-} */

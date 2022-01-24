@@ -14,7 +14,6 @@ export const Container = styled(ContainerMui)(({ theme }) => ({
 
 export const rootLockedClass = "scroll--locked";
 export const navLinkActiveClass = "navlink--active";
-export const navLinkShopClass = "navlink__icon--shop";
 export const navOpenClass = "nav--open";
 export const Nav = styled("nav")(({ theme }) => ({
   // MOBILE view
@@ -93,9 +92,6 @@ export const Nav = styled("nav")(({ theme }) => ({
           transition: "width 200ms, margin 200ms",
         },
       },
-      [`&.${navLinkShopClass} > svg`]: {
-        display: "none",
-      },
     },
   },
   // DESKTOP view
@@ -173,49 +169,6 @@ export const Nav = styled("nav")(({ theme }) => ({
           transition: "opacity 200ms, transform 200ms",
           pointerEvents: "none",
           background: "white", //theme.palette.textDark,
-        },
-      },
-      [`&.${navLinkShopClass}`]: {
-        padding: theme.spacing(1),
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        position: "relative",
-        "& > p": {
-          display: "none",
-        },
-        "&::before, &::after": {
-          position: "absolute",
-          content: '""',
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%, -50%) scale(0.8)",
-          width: `calc(100%)`,
-          height: `calc(100%)`,
-          opacity: 0,
-          transition: "opacity 200ms, transform 200ms",
-          pointerEvents: "none",
-          border: "1px solid white", //theme.palette.textDark,
-          borderRadius: "50%",
-        },
-        "&::after": {
-          transform: "translate(-50%, -50%) scale(1.4)",
-          width: `calc(100% + 5px)`,
-          height: `calc(100% + 5px)`,
-        },
-        "&:hover": {
-          "&::before": {
-            transform: "translate(-50%, -50%) scale(1)",
-            opacity: 1,
-            border: `1px solid ${theme.palette.primary.main}`, //theme.palette.textDark,
-          },
-        },
-        [`&.${navLinkActiveClass}`]: {
-          "&::before, &::after": {
-            transform: "translate(-50%, -50%) scale(1)",
-            opacity: 1,
-            border: `1px solid ${theme.palette.primary.main}`, //theme.palette.textDark,
-          },
         },
       },
     },

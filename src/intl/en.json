@@ -103,14 +103,6 @@
       "navText": "Contact",
       "title": "Contact us"
     },
-    "shop": {
-      "navText": "Shop",
-      "title": "Shop title"
-    },
-    "cart": {
-      "navText": "Cart",
-      "title": "Cart page"
-    },
     "404": {
       "title": "Page not found!"
     }

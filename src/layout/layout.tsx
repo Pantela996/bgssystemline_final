@@ -1,13 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { TransitionViews } from "gatsby-plugin-transitions";
+import CombinedProviders from "./combinedProviders";
+
 import "./layout.css";
 import { styled } from "@mui/material/styles";
-
 import Box from "@mui/material/Box";
 import Header from "./header";
 import Footer from "./footer";
-import CombinedProviders from "./combinedProviders";
 
 const RootDiv = styled(Box)(({ theme }) => ({
   ...theme.typography.body1,

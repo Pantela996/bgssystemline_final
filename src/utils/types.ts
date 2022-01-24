@@ -1,9 +1,9 @@
-import { GetShopItemsQuery } from "../../graphql-types";
+// import { GetShopItemsQuery } from "../../graphql-types";
 
-export type ProductData =
-  GetShopItemsQuery["allShopifyProduct"]["edges"][0]["node"];
+// export type ProductData =
+//   GetShopItemsQuery["allShopifyProduct"]["edges"][0]["node"];
 
-export type CartItem = {
-  product: ProductData;
-  quantity: number;
-};
+// export type CartItem = {
+//   product: ProductData;
+//   quantity: number;
+// };

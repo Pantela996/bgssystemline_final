@@ -8,21 +8,6 @@ module.exports = {
     siteUrl: `https://www.bgssystemline.com/`, //TODO
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        headers: {
-          "/sr/*": ["Accept-Language: sr"],
-        },
-      },
-    },
-    {
-      resolve: "gatsby-source-shopify",
-      options: {
-        password: process.env.GATSBY_SHOPIFY_SHOP_PASSWORD,
-        storeUrl: process.env.GATSBY_SHOPIFY_STORE_URL,
-      },
-    },
     `gatsby-plugin-material-ui`, // https://github.com/hupe1980/gatsby-theme-material-ui/tree/master/packages/gatsby-material-ui-components
     `gatsby-plugin-react-helmet`,
     {

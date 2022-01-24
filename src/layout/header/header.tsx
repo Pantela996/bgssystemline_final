@@ -3,9 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby-plugin-react-intl";
 import LanguageSelector from "./language-selector";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { navLinks } from "../../utils/constants";
-import { shopRoute } from "../../utils/constantsPlain";
 import t from "../../components/translate";
 import {
   Container,
@@ -15,7 +13,6 @@ import {
   MobileMenuBtn,
   Nav,
   navLinkActiveClass,
-  navLinkShopClass,
   navOpenClass,
   rootLockedClass,
 } from "./headerStyles";
@@ -54,31 +51,17 @@ const Header = () => {
         </Link>
         <Nav className={menuOpen && navOpenClass}>
           <ul>
-            {navLinks.map((navLink) =>
-              navLink.route !== shopRoute ? (
-                <li key={`navlink-key--${navLink.route}`}>
-                  <Link
-                    to={navLink.route}
-                    activeClassName={navLinkActiveClass}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <Typography>{t(navLink.text)}</Typography>
-                  </Link>
-                </li>
-              ) : (
-                <li key={`navlink-key--${navLink.route}`}>
-                  <Link
-                    to={navLink.route}
-                    className={navLinkShopClass}
-                    activeClassName={navLinkActiveClass}
-                    onClick={() => setMenuOpen(false)}
-                  >
-                    <ShoppingCartIcon />
-                    <Typography>{t(navLink.text)}</Typography>
-                  </Link>
-                </li>
-              )
-            )}
+            {navLinks.map((navLink) => (
+              <li key={`navlink-key--${navLink.route}`}>
+                <Link
+                  to={navLink.route}
+                  activeClassName={navLinkActiveClass}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  <Typography>{t(navLink.text)}</Typography>
+                </Link>
+              </li>
+            ))}
           </ul>
         </Nav>
 
