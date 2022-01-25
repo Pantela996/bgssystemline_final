@@ -27,9 +27,10 @@ const WrapperMain = styled(Box)(({ theme }) => ({
   // marginTop: headerHeight,
 }));
 
+export const MainBottomPadding = "70px";
 const Main = styled("main")(({ theme }) => ({
   minHeight: "100%",
-  paddingBottom: theme.spacing(7),
+  paddingBottom: MainBottomPadding,
 }));
 
 const Layout = ({ children, location }) => {

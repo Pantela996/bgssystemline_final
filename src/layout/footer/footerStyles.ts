@@ -2,7 +2,8 @@ import { styled } from "@mui/material";
 
 export const FooterRoot = styled("footer")(({ theme }) => ({
   backgroundColor: "black", // use theme color
-  paddingTop: theme.spacing(4),
+  paddingTop: theme.spacing(7),
+  paddingBottom: theme.spacing(3),
 }));
 
 export const footerAreas = {
@@ -41,7 +42,7 @@ export const Section = styled("section")(({ theme }) => ({
 }));
 
 export const LogoWrap = styled("div")(({ theme }) => ({
-  "& > div": {
+  "& > img": {
     margin: "0 auto",
     width: "100%",
     maxWidth: maxLogoWidth,

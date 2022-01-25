@@ -1,5 +1,4 @@
 import React from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { useStaticQuery, graphql } from "gatsby";
 import { Container, Typography } from "@mui/material";
 // @ts-ignore
@@ -86,13 +85,7 @@ const Footer = () => {
           </Section>
           <Section style={{ gridArea: footerAreas.logo }}>
             <LogoWrap>
-              <StaticImage
-                src="../../assets/images/logo/bgs-logo.svg"
-                formats={["auto", "webp", "avif"]}
-                alt="BGS logo"
-                layout="fullWidth"
-                placeholder="blurred"
-              />
+              <img src="/bgs-logo.svg" alt="BGS logo" />
             </LogoWrap>
           </Section>
         </ContentWrap>

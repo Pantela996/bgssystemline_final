@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby-plugin-react-intl";
 import LanguageSelector from "./language-selector";
 import { Typography, useMediaQuery, useTheme } from "@mui/material";
@@ -41,14 +40,7 @@ const Header = () => {
     <HeaderRoot>
       <Container>
         <Link to="/" onClick={() => setMenuOpen(false)}>
-          <StaticImage
-            src="../../assets/images/logo/bgs-logo.svg"
-            formats={["auto", "webp", "avif"]}
-            alt="BGS logo"
-            layout="fixed"
-            placeholder="blurred"
-            width={70}
-          />
+          <img width="70px" src="/bgs-logo.svg" alt="BGS logo" />
         </Link>
         <Nav className={menuOpen && navOpenClass}>
           <ul>
