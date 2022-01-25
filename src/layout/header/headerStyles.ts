@@ -6,6 +6,10 @@ export const HeaderRoot = styled("header")(({ theme }) => ({
   // top: 0,
   // width: "100%",
   // zIndex: 2,
+  "& img": {
+    display: "block",
+    width: "70px",
+  },
 }));
 
 export const headerHeight = "90px";

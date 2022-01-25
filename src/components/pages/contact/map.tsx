@@ -24,7 +24,7 @@ const mapCenter: LatLngExpression = [44.02565, 20.90838];
 const zoomLevel = 16;
 
 const customIcon = icon({
-  iconUrl: "../icons/icon-144x144.png",
+  iconUrl: "/bgs-logo--filled.svg",
   iconSize: [96, 96],
   iconAnchor: [0, 96],
   popupAnchor: [48, -100],

@@ -40,7 +40,7 @@ const Header = () => {
     <HeaderRoot>
       <Container>
         <Link to="/" onClick={() => setMenuOpen(false)}>
-          <img width="70px" src="/bgs-logo.svg" alt="BGS logo" />
+          <img src="/bgs-logo.svg" alt="BGS logo" />
         </Link>
         <Nav className={menuOpen && navOpenClass}>
           <ul>
