@@ -14,9 +14,7 @@ import { GetSliderImagesQuery } from "../../../../graphql-types";
 import t from "@translate";
 
 const sliderImgNames = [
-  "facade-solution",
   "interior-design",
-  "old-but-gold",
   "furniture",
   "modern-celling",
   "lighting-design",
@@ -34,8 +32,9 @@ const SliderContainer = styled("div")(({ theme }) => ({
   [`& .${swiperPaginationClass}`]: {
     ".swiper-pagination-bullet": {
       borderRadius: 0,
-      width: "0.7em",
-      height: "0.7em",
+      width: "1em",
+      height: "1em",
+      margin: "0 0.3em !important",
       opacity: 1,
       background: "gray",
       transition: "background 200ms, transform 200ms",
@@ -43,7 +42,7 @@ const SliderContainer = styled("div")(({ theme }) => ({
       position: "relative",
       "&-active": {
         background: theme.palette.primary.main,
-        transform: "scale(1.3)",
+        transform: "scale(1.2)",
       },
     },
   },
@@ -51,35 +50,52 @@ const SliderContainer = styled("div")(({ theme }) => ({
 
 SwiperCore.use([Autoplay, Pagination, Navigation]);
 
-const containerWrapClass = "slide-container-wrap";
-const textContainerClass = "slide-text-container";
-const imgContainerClass = "slide-img-container";
+const cardContainerWrapClass = "slide-card__container-wrap";
+const cardContainerClass = "slide-card__container";
+const slideImgContainerClass = "slide-img__container";
 const SlideContent = styled("div")(({ theme }) => ({
   position: "relative",
   width: "100%",
-  [`& .${imgContainerClass}`]: {
-    height: "80vh",
+  [`& .${slideImgContainerClass}`]: {
+    height: "78vh",
     width: "100%",
   },
-  [`& .${containerWrapClass}`]: {
+  [`& .${cardContainerWrapClass}`]: {
     position: "absolute",
     bottom: 0,
     top: 0,
     left: 0,
     right: 0,
   },
-  [`& .${textContainerClass}`]: {
+  [`& .${cardContainerClass}`]: {
     display: "flex",
     alignItems: "center",
     height: "100%",
   },
 }));
 
+const slideCardTitleClass = "slide-card__title";
+const slideCardTextClass = "slide-card__text";
+const slideCardButtonClass = "slide-card__button";
 const SlideCard = styled("div")(({ theme }) => ({
   position: "relative",
-  background: `rgba(255,255,255,0.7)`,
+  background: `rgba(255,255,255,0.8)`,
   padding: theme.spacing(3),
-  maxWidth: 330,
+  width: "100%",
+
+  [theme.breakpoints.up("md")]: {
+    maxWidth: 330,
+  },
+
+  [`& .${slideCardTitleClass}`]: {
+    color: "black",
+  },
+  [`& .${slideCardTextClass}`]: {
+    color: "black",
+  },
+  [`& .${slideCardButtonClass}`]: {
+    color: "black",
+  },
 }));
 
 export default function Slider() {
@@ -128,25 +144,30 @@ export default function Slider() {
           <SwiperSlide key={imgName}>
             <SlideContent>
               <GatsbyImage
-                className={imgContainerClass}
+                className={slideImgContainerClass}
                 image={useImgWithName(imgName)}
                 alt={imgName}
                 objectFit="cover"
-                objectPosition="50% 65%"
+                objectPosition="50% 70%"
               />
-              <div className={containerWrapClass}>
-                <Container className={textContainerClass}>
+              <div className={cardContainerWrapClass}>
+                <Container className={cardContainerClass}>
                   <SlideCard
                     onClick={(e) => e.stopPropagation()}
                     onDrag={(e) => e.stopPropagation()}
                   >
-                    <h3>
+                    <h3 className={slideCardTitleClass}>
                       {t(`pages.home.slider.cards.card${imgIndex}.title`)}
                     </h3>
-                    <p>
+                    <p className={slideCardTextClass}>
                       {t(`pages.home.slider.cards.card${imgIndex}.content`)}
                     </p>
-                    <Link to={`/services/${imgName}`}>Discover</Link>
+                    <Link
+                      to={`/services/${imgName}`}
+                      className={slideCardButtonClass}
+                    >
+                      {t(`pages.home.slider.button`)}
+                    </Link>
                   </SlideCard>
                 </Container>
               </div>

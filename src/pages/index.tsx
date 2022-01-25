@@ -6,6 +6,7 @@ import { Container } from "@mui/material";
 import t from "@translate";
 import Seo from "../components/seo";
 import Slider from "../components/pages/home/slider";
+import Title from "../components/title";
 
 const IndexPage = () => {
   return (
@@ -13,7 +14,7 @@ const IndexPage = () => {
       <Seo pageTitle="Home" />
       <Slider />
       <Container>
-        <h1>{t("pages.home.title")}</h1>
+        <Title>{t("pages.home.title")}</Title>
       </Container>
     </>
   );

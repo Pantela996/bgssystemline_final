@@ -11,6 +11,8 @@ export const footerAreas = {
   links: "footer-links-area",
   hours: "footer-hours-area",
 };
+
+const maxLogoWidth = "200px";
 export const ContentWrap = styled("main")(({ theme }) => ({
   display: "grid",
   gap: "2rem",
@@ -18,13 +20,10 @@ export const ContentWrap = styled("main")(({ theme }) => ({
   gridTemplateAreas: `"${footerAreas.address}" "${footerAreas.links}" "${footerAreas.hours}" "${footerAreas.logo}"`,
   [theme.breakpoints.up("sm")]: {
     gridTemplateColumns: "repeat(2, 1fr)",
-    gridTemplateAreas: `"${footerAreas.address} ${footerAreas.links}" "${footerAreas.hours} ${footerAreas.hours}" "${footerAreas.logo} ${footerAreas.logo}"`,
-  },
-  [theme.breakpoints.up("md")]: {
     gridTemplateAreas: `"${footerAreas.address} ${footerAreas.links}" "${footerAreas.logo} ${footerAreas.hours}"`,
   },
   [theme.breakpoints.up("lg")]: {
-    gridTemplateColumns: "repeat(4, 1fr)",
+    gridTemplateColumns: `${maxLogoWidth} repeat(3, 1fr)`,
     gridTemplateAreas: `"${footerAreas.logo} ${footerAreas.address} ${footerAreas.links} ${footerAreas.hours}"`,
   },
 }));
@@ -44,7 +43,11 @@ export const Section = styled("section")(({ theme }) => ({
 export const LogoWrap = styled("div")(({ theme }) => ({
   "& > div": {
     margin: "0 auto",
-    maxWidth: 180,
+    width: "100%",
+    maxWidth: maxLogoWidth,
+    [theme.breakpoints.up("sm")]: {
+      margin: "0",
+    },
   },
 }));
 

@@ -3,13 +3,14 @@ import Seo from "../components/seo";
 import { Container } from "@mui/material";
 // @ts-ignore
 import t from "@translate";
+import Title from "../components/title";
 
 export default function Services() {
   return (
     <>
       <Seo pageTitle="Services" />
       <Container>
-        <h1>{t("pages.services.title")}</h1>
+        <Title>{t("pages.services.title")}</Title>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
           architecto eveniet pariatur impedit ad maiores commodi, perspiciatis,

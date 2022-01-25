@@ -1,8 +1,17 @@
 {
   "global": {
+    "contact": {
+      "street": "Козарачка 6",
+      "zipCity": "34000 Крагујевац",
+      "country": "Србија",
+      "contactNumber": "+381 64 196 39 86",
+      "contactPerson": "Богдан Стевановић",
+      "contactEmail": "bogdan.stevanovic@bgsystemline.com"
+    },
     "footer": {
-      "quickLinks": "Quick Links",
-      "businessHours": "Business Hours",
+      "quickLinks": "Пречице",
+      "businessHours": "Радно време",
+      "hourShort": "ч",
       "allRightsReserved": "Сва права задржана"
     }
   },
@@ -12,33 +21,25 @@
       "title": "ВОДЕЋА КОМПАНИЈА ЗА ИНТЕРНИ ДИЗАЈН У СРБИЈИ",
       "subtitle": "TURNING YOUR INTERIOR DESIGN DREAMS INTO REALITY",
       "slider": {
-        "button": "Discover",
+        "button": "Истражи",
         "cards": {
           "card0": {
-            "title": "Facade Solution",
-            "content": "When it comes to getting the best return on your investment"
-          },
-          "card1": {
             "title": "Interior Design",
             "content": "We bring to the table years of experience in implementing various types of interior design solutions in Qatar and abroad"
           },
-          "card2": {
-            "title": "Old But Gold",
-            "content": "Based on the highest standards of planning and execution excellence"
-          },
-          "card3": {
+          "card1": {
             "title": "Furniture",
             "content": "Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world"
           },
-          "card4": {
+          "card2": {
             "title": "Modern Celling",
             "content": "Translating concepts of landscape architecture into actual spaces with the highest level of professionalism is our team’s primary objective"
           },
-          "card5": {
+          "card3": {
             "title": "Lighting Design",
             "content": "Many professionals in the interior design world believe that 75% of great design is attributed to great lighting design"
           },
-          "card6": {
+          "card4": {
             "title": "Wall Cladding",
             "content": "The inspiration for our latest creations comes from purely geometric to the most fluid organic forms, touching upon everything in between"
           }
@@ -103,17 +104,19 @@
     },
     "about": {
       "navText": "О нама",
-      "title": "О нама"
+      "title": "О нама",
+      "content": "[\"BGS offers a full range of interior design services, from concept to detailed design and fit-out services. We are indeed a one-stop-shop.\",\"We do variety of turn key solutions in construction bussines. We have link departments BGS Fit out, and BGS System Line. (In house furniture production, wall and floor cladding, upholstery products variety of mock up solutions, MEP and HVAC system etc.)\",\"On the other hand we have Design department and Construction Management Department who deliver projects from initial design (including as built project) to hand over and manage on the site solutions. I think we are very good at supporting falling back projects.\",\"As we are familiar with local market, we give our clients the best service in Serbia. We also have abroad experience so we made sure we will follow some of wide spread trends in Fit Out market.\",\"The BGS idea is to have more than one System Line operating indipendantly from the rest of the system, so it can support also a different bussines ideas, as we are doing our best to improve our System Line experience and bring final solution to the table, supporting client needs.\",\"Feel free to share your ideas with us!\"]",
+      "teamMembers": "[\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\"]"
     },
     "contact": {
       "navText": "Контакт",
-      "title": "Контактирајте нас",
-      "text": "Contact page text",
-      "mapMarkerPopup": "This message is shown when\nuser clicks on a map marker"
+      "title": "Јавите нам се",
+      "text": "Уколико вас занимају наше услуге, имате неке предлоге или жеље, контактријате нас:",
+      "mapMarkerPopup": "Овде је наше седиште!"
     },
     "404": {
       "title": "Страница није пронађена!",
-      "message": "You just hit a route that doesn&#39;t exist... the sadness."
+      "message": "Покушали сте да приступите непостојећој страници..."
     }
   }
 }

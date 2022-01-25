@@ -43,10 +43,11 @@ const Footer = () => {
             </Typography>
             <Nav>
               <ul>
-                <li>+381 64 196 39 86</li>
-                <li>Beograd, Srbija</li>
-                <li>Matavuljeva 5</li>
-                <li>bgsystemline@gmail.com</li>
+                <li>{t("global.contact.contactNumber")}</li>
+                <li>{t("global.contact.street")}</li>
+                <li>{t("global.contact.zipCity")}</li>
+                <li>{t("global.contact.country")}</li>
+                <li>{t("global.contact.contactEmail")}</li>
               </ul>
             </Nav>
           </Section>
@@ -81,7 +82,7 @@ const Footer = () => {
             >
               {t("global.footer.businessHours")}
             </Typography>
-            <Typography>09-17h</Typography>
+            <Typography>09-17{t("global.footer.hourShort")}</Typography>
           </Section>
           <Section style={{ gridArea: footerAreas.logo }}>
             <LogoWrap>
