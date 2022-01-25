@@ -40,12 +40,7 @@ export default function Contact() {
       <Seo pageTitle="Contact" />
       <Container>
         <h1>{t("pages.contact.title")}</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
-          architecto eveniet pariatur impedit ad maiores commodi, perspiciatis,
-          vitae placeat dignissimos voluptate eligendi vel vero labore
-          repudiandae provident et reiciendis doloremque.
-        </p>
+        <p>{t("pages.contact.text")}</p>
 
         <MapWrap>
           <MapContainer
@@ -55,9 +50,7 @@ export default function Contact() {
           >
             <TileLayer attribution={openSourceAttribution} url={tilesUrl} />
             <Marker position={mapCenter} icon={customIcon}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
+              <Popup>{t("pages.contact.mapMarkerPopup")}</Popup>
             </Marker>
           </MapContainer>
         </MapWrap>

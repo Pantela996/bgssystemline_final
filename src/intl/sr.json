@@ -1,6 +1,8 @@
 {
   "global": {
     "footer": {
+      "quickLinks": "Quick Links",
+      "businessHours": "Business Hours",
       "allRightsReserved": "Сва права задржана"
     }
   },
@@ -105,7 +107,9 @@
     },
     "contact": {
       "navText": "Контакт",
-      "title": "Контактирајте нас"
+      "title": "Контактирајте нас",
+      "text": "Contact page text",
+      "mapMarkerPopup": "This message is shown when\nuser clicks on a map marker"
     },
     "404": {
       "title": "Страница није пронађена!",

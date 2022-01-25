@@ -7,6 +7,7 @@ import "./layout.css";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Header from "./header";
+// import { headerHeight } from "./header/headerStyles";
 import Footer from "./footer";
 
 const RootDiv = styled(Box)(({ theme }) => ({
@@ -23,6 +24,7 @@ const WrapperMain = styled(Box)(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "space-between",
   flexGrow: 1,
+  // marginTop: headerHeight,
 }));
 
 const Main = styled("main")(({ theme }) => ({

@@ -130,15 +130,16 @@ export default function Slider() {
               <GatsbyImage
                 className={imgContainerClass}
                 image={useImgWithName(imgName)}
-                // formats={["auto", "webp", "avif"]}
                 alt={imgName}
-                // placeholder="blurred"
                 objectFit="cover"
                 objectPosition="50% 65%"
               />
               <div className={containerWrapClass}>
                 <Container className={textContainerClass}>
-                  <SlideCard>
+                  <SlideCard
+                    onClick={(e) => e.stopPropagation()}
+                    onDrag={(e) => e.stopPropagation()}
+                  >
                     <h3>
                       {t(`pages.home.slider.cards.card${imgIndex}.title`)}
                     </h3>

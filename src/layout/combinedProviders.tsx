@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import { TransitionProvider } from "gatsby-plugin-transitions";
 import { themeDefault } from "./layoutThemes";
 import { ThemeProvider } from "@mui/material/styles";
-// import { StoreProvider } from "../context/storeContext";
 
 const CombinedProviders = ({ children, location }) => {
   return (
@@ -34,9 +33,7 @@ const CombinedProviders = ({ children, location }) => {
           },
         }}
       >
-        {/* <StoreProvider> */}
         {children}
-        {/* </StoreProvider> */}
       </TransitionProvider>
     </ThemeProvider>
   );

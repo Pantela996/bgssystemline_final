@@ -56,7 +56,7 @@ const Footer = () => {
               variant="h5"
               className={SectionTitleClass}
             >
-              Quick Links
+              {t("global.footer.quickLinks")}
             </Typography>
             <Nav>
               <ul>
@@ -79,7 +79,7 @@ const Footer = () => {
               variant="h5"
               className={SectionTitleClass}
             >
-              Business Hours
+              {t("global.footer.businessHours")}
             </Typography>
             <Typography>09-17h</Typography>
           </Section>

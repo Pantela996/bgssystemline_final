@@ -2,9 +2,13 @@ import { styled, Container as ContainerMui, Button } from "@mui/material";
 
 export const HeaderRoot = styled("header")(({ theme }) => ({
   backgroundColor: "black", //theme.palette.textDark,
+  // position: "fixed",
+  // top: 0,
+  // width: "100%",
+  // zIndex: 2,
 }));
 
-const headerHeight = "90px";
+export const headerHeight = "90px";
 export const Container = styled(ContainerMui)(({ theme }) => ({
   display: "flex",
   justifyContent: "space-between",
