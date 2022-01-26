@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: `BGS System Line`,
     description: `BGS Description`, //TODO
+    siteImage: "/default-og-image.png",
     author: `milos & milos`, //TODO
     siteUrl: `https://www.bgssystemline.com/`, //TODO
   },

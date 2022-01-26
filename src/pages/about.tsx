@@ -10,6 +10,7 @@ const TeamWrap = styled("div")(({ theme }) => ({
   gap: "1rem",
   gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
   gridAutoRows: "200px",
+  marginTop: theme.spacing(7),
   "& > div": {
     background: "black",
     color: "white",

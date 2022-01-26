@@ -10,20 +10,25 @@ import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 import { useIntl } from "gatsby-plugin-react-intl";
 
-type ImageType = {
-  src: string;
-  height: number;
-  width: number;
-};
+// type ImageType = {
+//   src: string;
+//   height: number;
+//   width: number;
+// };
 
 type SeoProps = {
   pageTitle: string;
   description?: string;
   meta?: { property: string; content: any; name?: undefined }[];
-  image?: ImageType;
+  imageSrc?: string;
 };
 
-function Seo({ pageTitle, description = "", meta = [] }: SeoProps) {
+function Seo({
+  pageTitle,
+  description = "",
+  imageSrc = "",
+  meta = [],
+}: SeoProps) {
   const intl = useIntl();
   const { site } = useStaticQuery(
     graphql`
@@ -32,6 +37,7 @@ function Seo({ pageTitle, description = "", meta = [] }: SeoProps) {
           siteMetadata {
             title
             description
+            siteImage
             author
           }
         }
@@ -40,6 +46,7 @@ function Seo({ pageTitle, description = "", meta = [] }: SeoProps) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
+  const ogImage = imageSrc || site.siteMetadata.siteImage;
   const defaultTitle = site.siteMetadata?.title;
 
   return (
@@ -55,12 +62,20 @@ function Seo({ pageTitle, description = "", meta = [] }: SeoProps) {
           content: metaDescription,
         },
         {
+          name: `image`,
+          content: ogImage,
+        },
+        {
           property: `og:title`,
           content: pageTitle,
         },
         {
           property: `og:description`,
           content: metaDescription,
+        },
+        {
+          name: `og:image`,
+          content: ogImage,
         },
         {
           property: `og:type`,
@@ -83,6 +98,25 @@ function Seo({ pageTitle, description = "", meta = [] }: SeoProps) {
           content: metaDescription,
         },
       ].concat(meta)}
+      link={[
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: "/favicon-32x32.png",
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: "/favicon-16x16.png",
+        },
+        {
+          rel: "apple-touch-icon",
+          sizes: "180x180",
+          href: "/apple-touch-icon.png",
+        },
+      ]}
     />
   );
 }

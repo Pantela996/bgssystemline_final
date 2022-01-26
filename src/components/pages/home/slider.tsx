@@ -69,7 +69,7 @@ const SlideContent = styled("div")(({ theme }) => ({
   },
   [`& .${cardContainerClass}`]: {
     display: "flex",
-    alignItems: "center",
+    alignItems: "flex-end",
     height: "100%",
   },
 }));
@@ -82,9 +82,12 @@ const SlideCard = styled("div")(({ theme }) => ({
   background: `rgba(255,255,255,0.8)`,
   padding: theme.spacing(3),
   width: "100%",
+  marginBottom: "50px",
 
   [theme.breakpoints.up("md")]: {
-    maxWidth: 330,
+    marginBottom: "80px",
+    maxWidth: 420,
+    padding: theme.spacing(5),
   },
 
   [`& .${slideCardTitleClass}`]: {

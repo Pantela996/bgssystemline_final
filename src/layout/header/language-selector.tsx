@@ -9,7 +9,7 @@ const RootDiv = styled("section")(({ theme }) => ({
   height: "80%",
 }));
 
-const flagWidth = "33px";
+const flagWidth = "27px";
 const flagSidePadding = "5px";
 const Button = styled(ButtonMui)(({ theme }) => ({
   color: "white", //theme.palette.textDark,
