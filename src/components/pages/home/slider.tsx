@@ -71,6 +71,8 @@ const slideCardTitleClass = "slide-card__title";
 const slideCardTextClass = "slide-card__text";
 const slideCardButtonClass = "slide-card__button";
 const SlideCard = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "column",
   position: "relative",
   background: `rgba(255,255,255,0.8)`,
   padding: theme.spacing(3),
@@ -90,7 +92,16 @@ const SlideCard = styled("div")(({ theme }) => ({
     color: "black",
   },
   [`& .${slideCardButtonClass}`]: {
-    color: "black",
+    alignSelf: "flex-end",
+    color: "white",
+    textDecoration: "none",
+    marginLeft: "auto",
+    padding: theme.spacing(1.5),
+    background: "rgba(0,0,0,0.7)",
+    transition: "background 200ms",
+    "&:hover": {
+      background: "rgba(0,0,0,1)",
+    },
   },
 }));
 

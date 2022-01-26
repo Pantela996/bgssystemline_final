@@ -60,11 +60,11 @@
       "seoDescription": "text",
       "sliderButton": "Discover",
       "stats": {
-        "stat1": "Saving from our Value Engineering",
-        "stat2": "Hotel Rooms Executed",
-        "stat3": "Nationalities",
-        "stat4": "Cumulative Years of Design Experience",
-        "stat5": "Manufacturers in our Sourcing Database"
+        "stat0": "Saving from our Value Engineering",
+        "stat1": "Hotel Rooms Executed",
+        "stat2": "Nationalities",
+        "stat3": "Cumulative Years of Design Experience",
+        "stat4": "Manufacturers in our Sourcing Database"
       }
     },
     "services": {

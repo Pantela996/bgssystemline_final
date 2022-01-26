@@ -2922,6 +2922,11 @@ export type SiteTitleQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type SiteTitleQueryQuery = { site?: { siteMetadata?: { title?: string | null | undefined } | null | undefined } | null | undefined };
 
+export type GetPortfolioProjectsQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetPortfolioProjectsQuery = { allDirectory: { edges: Array<{ node: { name: string } }> } };
+
 export type GatsbyImageSharpFixedFragment = { base64?: string | null | undefined, width: number, height: number, src: string, srcSet: string };
 
 export type GatsbyImageSharpFixed_TracedSvgFragment = { tracedSVG?: string | null | undefined, width: number, height: number, src: string, srcSet: string };

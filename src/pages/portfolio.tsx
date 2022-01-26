@@ -1,11 +1,26 @@
 import React from "react";
+import { graphql, useStaticQuery } from "gatsby";
 import Seo from "../components/seo";
 import { Container } from "@mui/material";
 // @ts-ignore
 import t from "@translate";
 import Title from "../components/title";
 
-export default function Portfolio() {
+export default function Portfolio({ data }) {
+  // <GetPortfolioProjects>
+  // const folderData = useStaticQuery(graphql`
+  //   query getPortfolioProjects {
+  //     allDirectory(filter: { relativeDirectory: { eq: "portfolio" } }) {
+  //       edges {
+  //         node {
+  //           name
+  //         }
+  //       }
+  //     }
+  //   }
+  // `);
+
+  console.log("portfolio folders", data);
   return (
     <div>
       <Seo
@@ -25,3 +40,15 @@ export default function Portfolio() {
     </div>
   );
 }
+
+export const query = graphql`
+  query getPortfolioProjects {
+    allDirectory(filter: { relativeDirectory: { eq: "portfolio-projects" } }) {
+      edges {
+        node {
+          name
+        }
+      }
+    }
+  }
+`;
