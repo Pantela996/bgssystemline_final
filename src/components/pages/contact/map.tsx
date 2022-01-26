@@ -23,17 +23,17 @@ const openSourceAttribution =
 const mapCenter: LatLngExpression = [44.02565, 20.90838];
 const zoomLevel = 16;
 
-const customIcon = icon({
-  iconUrl: "/bgs-logo--filled.svg",
-  iconSize: [96, 96],
-  iconAnchor: [0, 96],
-  popupAnchor: [48, -100],
-  // shadowUrl: "my-icon-shadow.png",
-  // shadowSize: [68, 95],
-  // shadowAnchor: [22, 94],
-});
-
 const Map = () => {
+  const customIcon = icon({
+    iconUrl: "/bgs-logo--filled.svg",
+    iconSize: [96, 96],
+    iconAnchor: [0, 96],
+    popupAnchor: [48, -100],
+    // shadowUrl: "my-icon-shadow.png",
+    // shadowSize: [68, 95],
+    // shadowAnchor: [22, 94],
+  });
+
   return (
     <MapWrap>
       <MapContainer center={mapCenter} zoom={zoomLevel} scrollWheelZoom={false}>

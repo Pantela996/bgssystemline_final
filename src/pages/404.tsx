@@ -13,7 +13,7 @@ const NotFoundPage = () => (
     />
     <Container>
       <Title>404: {t("pages.404.title")}</Title>
-      <p>{t("pages.404.message")}</p>
+      <p style={{ textAlign: "center" }}>{t("pages.404.message")}</p>
     </Container>
   </>
 );

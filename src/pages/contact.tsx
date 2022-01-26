@@ -80,6 +80,7 @@ const ContactContent = ({ left = false }: { left?: boolean }) => (
     </ContactGroup>
   </>
 );
+const isBrowser = typeof window !== "undefined";
 
 export default function Contact() {
   // https://www.instagram.com/bgssystemline/
@@ -96,14 +97,12 @@ export default function Contact() {
         <Container>
           <ContactContent />
         </Container>
-        <MapContainer>
-          <Map />
-        </MapContainer>
+        <MapContainer>{isBrowser && <Map />}</MapContainer>
       </FullScreen>
 
       {/* desktop */}
       <SplitScreen>
-        <Map />
+        {isBrowser && <Map />}
         <SideContainer>
           <ContactContent left />
         </SideContainer>
