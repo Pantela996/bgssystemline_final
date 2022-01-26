@@ -11,27 +11,8 @@ import PersonIcon from "@mui/icons-material/Person";
 import Title from "../components/title";
 import Map from "../components/pages/contact/map";
 import SideContainer from "../components/sideContainer";
-
-const FullScreen = styled("div")(({ theme }) => ({
-  width: "100%",
-  height: "100%",
-  display: "block",
-  [theme.breakpoints.up("md")]: {
-    display: "none",
-  },
-}));
-
-const SplitScreen = styled("div")(({ theme }) => ({
-  display: "none",
-  [theme.breakpoints.up("md")]: {
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
-    gridAutoRows: "100%",
-    height: "100%",
-    minHeight: "70vh",
-    marginBottom: `-${MainBottomPadding}`,
-  },
-}));
+import FullScreen from "../components/fullScreen";
+import SplitScreen from "../components/splitScreen";
 
 const MapContainer = styled("div")(({ theme }) => ({
   height: 400,
@@ -61,9 +42,9 @@ const ContactGroup = styled("div")(({ theme }) => ({
   },
 }));
 
-const ContactContent = () => (
+const ContactContent = ({ left = false }: { left?: boolean }) => (
   <>
-    <Title>{t("pages.contact.title")}</Title>
+    <Title left={left}>{t("pages.contact.title")}</Title>
     <p>{t("pages.contact.text")}</p>
 
     <ContactGroup>
@@ -124,7 +105,7 @@ export default function Contact() {
       <SplitScreen>
         <Map />
         <SideContainer>
-          <ContactContent />
+          <ContactContent left />
         </SideContainer>
       </SplitScreen>
     </>

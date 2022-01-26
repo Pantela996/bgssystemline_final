@@ -2927,6 +2927,11 @@ export type GetPortfolioProjectsQueryVariables = Exact<{ [key: string]: never; }
 
 export type GetPortfolioProjectsQuery = { allDirectory: { edges: Array<{ node: { name: string } }> } };
 
+export type GetServicesImagesQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type GetServicesImagesQuery = { allFile: { edges: Array<{ node: { name: string, childImageSharp?: { gatsbyImageData: any } | null | undefined } }> } };
+
 export type GatsbyImageSharpFixedFragment = { base64?: string | null | undefined, width: number, height: number, src: string, srcSet: string };
 
 export type GatsbyImageSharpFixed_TracedSvgFragment = { tracedSVG?: string | null | undefined, width: number, height: number, src: string, srcSet: string };

@@ -14,12 +14,13 @@ import { GetSliderImagesQuery } from "../../../../graphql-types";
 import t from "@translate";
 import { serviceSlugs } from "../../../utils/constantsPlain";
 
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 const sliderImgNames = [...serviceSlugs] as const;
 
 const swiperPaginationClass = "swiper-pagination";
 const SliderContainer = styled("div")(({ theme }) => ({
   maxWidth: "100%",
-  overflowX: "hidden",
+  overflow: "hidden",
   backgroundColor: "black", //theme.palette.textDark,
 
   [`& .${swiperPaginationClass}`]: {
@@ -40,8 +41,6 @@ const SliderContainer = styled("div")(({ theme }) => ({
     },
   },
 }));
-
-SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const cardContainerWrapClass = "slide-card__container-wrap";
 const cardContainerClass = "slide-card__container";
