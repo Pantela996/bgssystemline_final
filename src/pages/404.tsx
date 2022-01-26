@@ -7,7 +7,10 @@ import Title from "../components/title";
 
 const NotFoundPage = () => (
   <>
-    <Seo pageTitle="404: Not found" />
+    <Seo
+      pageTitle={t("pages.404.title")}
+      description={t("pages.404.seoDescription")}
+    />
     <Container>
       <Title>404: {t("pages.404.title")}</Title>
       <p>{t("pages.404.message")}</p>

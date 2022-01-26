@@ -8,7 +8,10 @@ import Title from "../components/title";
 export default function Services() {
   return (
     <>
-      <Seo pageTitle="Services" />
+      <Seo
+        pageTitle={t("pages.services.navText")}
+        description={t("pages.services.seoDescription")}
+      />
       <Container>
         <Title>{t("pages.services.title")}</Title>
         <p>

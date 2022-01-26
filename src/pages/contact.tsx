@@ -101,9 +101,15 @@ const ContactContent = () => (
 );
 
 export default function Contact() {
+  // https://www.instagram.com/bgssystemline/
+  // https://www.linkedin.com/company/bgs-system-line/
+  // https://www.facebook.com/BGS-System-Line-113514583708281
   return (
     <>
-      <Seo pageTitle="Contact" />
+      <Seo
+        pageTitle={t("pages.contact.navText")}
+        description={t("pages.contact.seoDescription")}
+      />
       {/* mobile */}
       <FullScreen>
         <Container>

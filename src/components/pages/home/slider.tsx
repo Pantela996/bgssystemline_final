@@ -12,16 +12,9 @@ import "swiper/css/navigation";
 import { GetSliderImagesQuery } from "../../../../graphql-types";
 // @ts-ignore
 import t from "@translate";
+import { serviceSlugs } from "../../../utils/constantsPlain";
 
-const sliderImgNames = [
-  "interior-design",
-  "furniture",
-  "modern-celling",
-  "lighting-design",
-  "wall-cladding",
-] as const;
-// NAME: must be the same as route that it's link is pointing to
-// ORDER: must be the same as is in translations
+const sliderImgNames = [...serviceSlugs] as const;
 
 const swiperPaginationClass = "swiper-pagination";
 const SliderContainer = styled("div")(({ theme }) => ({
@@ -160,16 +153,16 @@ export default function Slider() {
                     onDrag={(e) => e.stopPropagation()}
                   >
                     <h3 className={slideCardTitleClass}>
-                      {t(`pages.home.slider.cards.card${imgIndex}.title`)}
+                      {t(`global.services.service${imgIndex}.title`)}
                     </h3>
                     <p className={slideCardTextClass}>
-                      {t(`pages.home.slider.cards.card${imgIndex}.content`)}
+                      {t(`global.services.service${imgIndex}.cardContent`)}
                     </p>
                     <Link
                       to={`/services/${imgName}`}
                       className={slideCardButtonClass}
                     >
-                      {t(`pages.home.slider.button`)}
+                      {t(`pages.home.sliderButton`)}
                     </Link>
                   </SlideCard>
                 </Container>

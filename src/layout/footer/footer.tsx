@@ -28,6 +28,11 @@ const Footer = () => {
     }
   `);
   const siteTitle = data.site.siteMetadata?.title || "";
+
+  // https://www.instagram.com/bgssystemline/
+  // https://www.linkedin.com/company/bgs-system-line/
+  // https://www.facebook.com/BGS-System-Line-113514583708281
+
   return (
     <FooterRoot>
       <Container>

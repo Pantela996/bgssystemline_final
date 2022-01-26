@@ -3,7 +3,7 @@
   "private": true,
   "description": "BGS Description //TODO",
   "version": "0.1.0",
-  "author": "milos & milos //TODO",
+  "author": "milos & milos",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",

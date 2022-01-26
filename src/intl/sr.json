@@ -1,5 +1,42 @@
 {
   "global": {
+    "services": {
+      "service0": {
+        "title": "Interior Design",
+        "quote": "At BGSystem, we firmly believe that a successful interior design solution is one that is unique to the client’s vision and meets all of their objectives.",
+        "subtitle": "A Range of Solutions, a Network of Sources",
+        "cardContent": "We bring to the table years of experience in implementing various types of interior design solutions in Qatar and abroad",
+        "pageContent": "We bring to the table years of experience in implementing various types of interior design solutions in Serbia and abroad. We are fully aware that each project requires a unique and individualised process. By attentively listening to and immersing ourselves in our client’s vision and objectives, we are able to better fulfil their goals.Successful interior design projects are those that create a lasting positive impression on people that interact with spaces where they live, work, and play. BGS offers a full range of interior design services, from concept to detailed design and fit-out services. We are indeed a one-stop-shop. Building strong, long-lasting relationships with our clients is the cornerstone to successful interior design and fit-out projects.We sincerely believe that mutual respect and trust are the seeds of these relationships that, once nurtured, produce long lasting mutually beneficial relationships."
+      },
+      "service1": {
+        "title": "Furniture",
+        "quote": "Once we have given in-depth and thorough thought to the specific materials we want to use in your space, it is time to get them before your eyes.",
+        "subtitle": "Wide range of sources",
+        "cardContent": "Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world",
+        "pageContent": "Materials used for implementing a project are as important as the lighting, shapes, and colors. Skillfully, we can supply any material you can think of.If we think your space needs a particular material to get the look, we make it happen. Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world.Whether you are into classical interior design concepts or you lean toward contemporary interior design, we respect your wishes and make them come true. We cherish traditional values in design. Still, we are always out there, searching for new alternative materials that last longer and look better, and attending international trade shows to learn more about them."
+      },
+      "service2": {
+        "title": "Modern Celling",
+        "quote": "For our landscape design team, design is a way of life.",
+        "subtitle": "Inspiring forms, passionate people",
+        "cardContent": "Translating concepts of landscape architecture into actual spaces with the highest level of professionalism is our team’s primary objective",
+        "pageContent": "The inspiration for our latest creations comes from purely geometric to the most fluid organic forms, touching upon everything in between. Our team’s international experience is the endless source of passion for original, progressive, and inspiring environments they create.Translating concepts of landscape architecture into actual spaces with the highest level of professionalism is our team’s primary objective. It is with great pride that we can say that a team made up of individuals with the most illustrious personal and academic careers has come together under one roof to serve our clients and the world we live in.The BGS team unifies landscape architecture with interior design, overcoming challenges that may arise in this process with joy. We tackle different issues by merging these two different yet complementing concepts with great care and an eye for detail."
+      },
+      "service3": {
+        "title": "Lighting Design",
+        "quote": "From years of experience in lighting design, we have learned that without great lighting, a space cannot truly shine.",
+        "subtitle": "Shedding light on the power of lighting",
+        "cardContent": "Many professionals in the interior design world believe that 75% of great design is attributed to great lighting design",
+        "pageContent": "Many professionals in the interior design world believe that 75% of great design is attributed to great lighting design. Regardless of the exact percentage, we completely agree that lighting design plays a critical role in our lives – and our projects.Subconsciously, lighting is a major reason why people favor one shop over another, feel more comfortable in one hotel room and not in another, or are more productive in one office over another. The impact of lighting on our daily rest, work, and play is very powerful as it can change our mood, as well as energize and relax us.To ensure the final success of a project, we involve our lighting designers from the onset of each of our projects. By incorporating the input of our specialized team right from the start, we can better integrate the lighting design with the architecture as well as avoid any potential costly changes to mechanical or electrical works at a later stage."
+      },
+      "service4": {
+        "title": "Wall Cladding",
+        "quote": "For our landscape design team, design is a way of life.",
+        "subtitle": "Inspiring forms, passionate people",
+        "cardContent": "The inspiration for our latest creations comes from purely geometric to the most fluid organic forms, touching upon everything in between",
+        "pageContent": "The inspiration for our latest creations comes from purely geometric to the most fluid organic forms, touching upon everything in between. Our team’s international experience is the endless source of passion for original, progressive, and inspiring environments they create.Translating concepts of landscape architecture into actual spaces with the highest level of professionalism is our team’s primary objective. It is with great pride that we can say that a team made up of individuals with the most illustrious personal and academic careers has come together under one roof to serve our clients and the world we live in.The BGS team unifies landscape architecture with interior design, overcoming challenges that may arise in this process with joy. We tackle different issues by merging these two different yet complementing concepts with great care and an eye for detail."
+      }
+    },
     "contact": {
       "street": "Козарачка 6",
       "zipCity": "34000 Крагујевац",
@@ -20,102 +57,43 @@
       "navText": "Почетна",
       "title": "ВОДЕЋА КОМПАНИЈА ЗА ИНТЕРНИ ДИЗАЈН У СРБИЈИ",
       "subtitle": "TURNING YOUR INTERIOR DESIGN DREAMS INTO REALITY",
-      "slider": {
-        "button": "Истражи",
-        "cards": {
-          "card0": {
-            "title": "Interior Design",
-            "content": "We bring to the table years of experience in implementing various types of interior design solutions in Qatar and abroad"
-          },
-          "card1": {
-            "title": "Furniture",
-            "content": "Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world"
-          },
-          "card2": {
-            "title": "Modern Celling",
-            "content": "Translating concepts of landscape architecture into actual spaces with the highest level of professionalism is our team’s primary objective"
-          },
-          "card3": {
-            "title": "Lighting Design",
-            "content": "Many professionals in the interior design world believe that 75% of great design is attributed to great lighting design"
-          },
-          "card4": {
-            "title": "Wall Cladding",
-            "content": "The inspiration for our latest creations comes from purely geometric to the most fluid organic forms, touching upon everything in between"
-          }
-        }
-      },
-      "overview": {
-        "view1": {
-          "title": "Facade Solution",
-          "content": "When it comes to getting the best return on your investment, there is simply no replacement for your designer’s experience.Our team has cumulatively designed over 1,500 hotel rooms, 780 furnished apartments, 58 restaurants, and countless other spaces.Our designers fully understand that value engineering is a sensitive issue."
-        },
-        "view2": {
-          "title": "Interior Design",
-          "content": "We bring to the table years of experience in implementing various types of interior design solutions in Serbia and abroad. We are fully aware that each project requires a unique and individualised process. By attentively listening to and immersing ourselves in our client’s vision and objectives, we are able to better fulfil their goals."
-        },
-        "view3": {
-          "title": "Furniture",
-          "content": "Materials used for implementing a project are as important as the lighting, shapes, and colors. Skillfully, we can supply any material you can think of.If we think your space needs a particular material to get the look, we make it happen. Our purchasing and logistics team goes the extra mile – quite literally – to provide your space with materials obtained from our partners located at various parts of the world."
-        },
-        "view4": {
-          "title": "Team",
-          "content": "Of the eleven core values of BGS, by far the most important is our Team. We strive to hire and maintain members with character, competence, and commitment. We see our organization as a place where people feel safe to try new things and challenge themselves without the fear of failure.Our team is made up of professionals from over 17 nationalities; an extraordinary mixing pot of far-ranging experiences and skills."
-        }
-      },
-      "portfolio": {
-        "title": "Our Portfolio",
-        "items": {
-          "item1": "Kitchen",
-          "item2": "Living Room",
-          "item3": "Bedroom",
-          "item4": "Simopolo"
-        }
-      },
+      "seoDescription": "text",
+      "sliderButton": "Истражи",
       "stats": {
         "stat1": "Saving from our Value Engineering",
         "stat2": "Hotel Rooms Executed",
         "stat3": "Nationalities",
         "stat4": "Cumulative Years of Design Experience",
         "stat5": "Manufacturers in our Sourcing Database"
-      },
-      "servics": {
-        "title": "Our Services",
-        "items": {
-          "item1": "Facade Solution",
-          "item2": "Interior Design",
-          "item3": "Old But Gold",
-          "item4": "Furniture",
-          "item5": "Lightning Design",
-          "item6": "Modern Celling"
-        }
-      },
-      "blog": {
-        "title": "Latest from our blog"
       }
     },
     "services": {
       "navText": "Услуге",
-      "title": "Услуге"
+      "title": "Услуге",
+      "seoDescription": "текст"
     },
     "portfolio": {
       "navText": "Портфолио",
-      "title": "Портфолио"
+      "title": "Портфолио",
+      "seoDescription": "текст"
     },
     "about": {
       "navText": "О нама",
       "title": "О нама",
+      "seoDescription": "текст",
       "content": "[\"BGS offers a full range of interior design services, from concept to detailed design and fit-out services. We are indeed a one-stop-shop.\",\"We do variety of turn key solutions in construction bussines. We have link departments BGS Fit out, and BGS System Line. (In house furniture production, wall and floor cladding, upholstery products variety of mock up solutions, MEP and HVAC system etc.)\",\"On the other hand we have Design department and Construction Management Department who deliver projects from initial design (including as built project) to hand over and manage on the site solutions. I think we are very good at supporting falling back projects.\",\"As we are familiar with local market, we give our clients the best service in Serbia. We also have abroad experience so we made sure we will follow some of wide spread trends in Fit Out market.\",\"The BGS idea is to have more than one System Line operating indipendantly from the rest of the system, so it can support also a different bussines ideas, as we are doing our best to improve our System Line experience and bring final solution to the table, supporting client needs.\",\"Feel free to share your ideas with us!\"]",
       "teamMembers": "[\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\"]"
     },
     "contact": {
       "navText": "Контакт",
       "title": "Јавите нам се",
+      "seoDescription": "текст",
       "text": "Уколико вас занимају наше услуге, имате неке предлоге или жеље, контактријате нас:",
       "mapMarkerPopup": "Овде је наше седиште!"
     },
     "404": {
       "title": "Страница није пронађена!",
+      "seoDescription": "текст",
       "message": "Покушали сте да приступите непостојећој страници..."
     }
   }

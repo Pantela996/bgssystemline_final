@@ -8,7 +8,10 @@ import Title from "../components/title";
 export default function Portfolio() {
   return (
     <div>
-      <Seo pageTitle="Portfolio" />
+      <Seo
+        pageTitle={t("pages.portfolio.navText")}
+        description={t("pages.portfolio.seoDescription")}
+      />
       <Container>
         <Title>{t("pages.portfolio.title")}</Title>
         <p>

@@ -25,13 +25,17 @@ export default function About() {
   const teamMembers: string[] = JSON.parse(t("pages.about.teamMembers"));
   return (
     <>
-      <Seo pageTitle="About" />
+      <Seo
+        pageTitle={t("pages.about.navText")}
+        description={t("pages.about.seoDescription")}
+      />
       <Container>
         <Title>{t("pages.about.title")}</Title>
         {paragraphs.map((pText, pi) => (
           <p key={pi}>{pText}</p>
         ))}
 
+        {/* TODO */}
         <TeamWrap>
           {teamMembers.map((member, mi) => (
             <div key={mi}>
