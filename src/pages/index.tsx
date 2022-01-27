@@ -47,7 +47,7 @@ const IndexPage = () => {
         {/* Sto se samog portfolia tice, ja ne bih apostrofirao, kako je to bilo prethodno uradjeno, da je nesto dnevna soba ili kuhinja, vec bih pokusao ovako da imanujem projekte tipa kako je sad, ali zbog klijenata treba da sakrijem licna imena, prezimena itd. Neki od ovih rendera ce se u finalnoj fazi jos izbaciti, ali nece biti dodataka */}
         <Ul>
           {stats.map((stat, i) => (
-            <li>
+            <li key={`stat-${i}`}>
               <div className={numberClass}>
                 {stat}
                 {i === 0 && "%"}{" "}

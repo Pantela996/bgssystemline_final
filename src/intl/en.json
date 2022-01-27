@@ -88,8 +88,8 @@
       "navText": "Contact",
       "title": "Contact us",
       "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture",
-      "text": "Contact page text",
-      "mapMarkerPopup": "This message is shown when\nuser clicks on a map marker"
+      "text": "If you're interested in any of our services (or you just have a question for us), you can reach us here:",
+      "mapMarkerPopup": "We are located right here!"
     },
     "404": {
       "title": "Page not found!",

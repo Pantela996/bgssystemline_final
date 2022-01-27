@@ -193,7 +193,7 @@ function ServicesContent({ left = false }: { left?: boolean }) {
       <Title left={left}>{t("pages.services.title")}</Title>
       <ServiceLinksWrap>
         {serviceSlugs.map((serviceSlug, slugIndex) => (
-          <Link to={`/services/${serviceSlug}`}>
+          <Link to={`/services/${serviceSlug}`} key={serviceSlug}>
             {t(`global.services.service${slugIndex}.title`)}
           </Link>
         ))}
