@@ -56,44 +56,44 @@
     "home": {
       "navText": "Почетна",
       "title": "ВОДЕЋА КОМПАНИЈА ЗА ДИЗАЈН ЕНТЕРИЈЕРА У СРБИЈИ",
-      "subtitle": "TURNING YOUR INTERIOR DESIGN DREAMS INTO REALITY",
-      "seoDescription": "text",
+      "subtitle": "ВАШЕ КРЕАТИВНЕ ЗАМИСЛИ, НАША СТВАРНОСТ",
+      "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура",
       "sliderButton": "Истражи",
       "stats": {
-        "stat0": "Saving from our Value Engineering",
-        "stat1": "Hotel Rooms Executed",
-        "stat2": "Nationalities",
-        "stat3": "Cumulative Years of Design Experience",
-        "stat4": "Manufacturers in our Sourcing Database"
+        "stat0": "Уштеда са нашим тимом",
+        "stat1": "Завршени пројекти",
+        "stat2": "Националности",
+        "stat3": "Године заједничког искуства",
+        "stat4": "Произвођачи у нашој бази података"
       }
     },
     "services": {
       "navText": "Услуге",
       "title": "Услуге",
-      "seoDescription": "текст"
+      "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура"
     },
     "portfolio": {
       "navText": "Портфолио",
       "title": "Портфолио",
-      "seoDescription": "текст"
+      "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура"
     },
     "about": {
       "navText": "О нама",
       "title": "О нама",
-      "seoDescription": "текст",
+      "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура",
       "content": "[\"BGS offers a full range of interior design services, from concept to detailed design and fit-out services. We are indeed a one-stop-shop.\",\"We do variety of turn key solutions in construction bussines. We have link departments BGS Fit out, and BGS System Line. (In house furniture production, wall and floor cladding, upholstery products variety of mock up solutions, MEP and HVAC system etc.)\",\"On the other hand we have Design department and Construction Management Department who deliver projects from initial design (including as built project) to hand over and manage on the site solutions. I think we are very good at supporting falling back projects.\",\"As we are familiar with local market, we give our clients the best service in Serbia. We also have abroad experience so we made sure we will follow some of wide spread trends in Fit Out market.\",\"The BGS idea is to have more than one System Line operating indipendantly from the rest of the system, so it can support also a different bussines ideas, as we are doing our best to improve our System Line experience and bring final solution to the table, supporting client needs.\",\"Feel free to share your ideas with us!\"]",
       "teamMembers": "[\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\"]"
     },
     "contact": {
       "navText": "Контакт",
       "title": "Јавите нам се",
-      "seoDescription": "текст",
+      "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура",
       "text": "Уколико вас занимају наше услуге, имате неке предлоге или жеље, контактријате нас:",
       "mapMarkerPopup": "Овде је наше седиште!"
     },
     "404": {
       "title": "Страница није пронађена!",
-      "seoDescription": "текст",
+      "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура",
       "message": "Покушали сте да приступите непостојећој страници..."
     }
   }

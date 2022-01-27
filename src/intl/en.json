@@ -5,7 +5,7 @@
         "title": "Interior Design",
         "quote": "At BGSystem, we firmly believe that a successful interior design solution is one that is unique to the client’s vision and meets all of their objectives.",
         "subtitle": "A Range of Solutions, a Network of Sources",
-        "cardContent": "We bring to the table years of experience in implementing various types of interior design solutions in Qatar and abroad",
+        "cardContent": "We bring to the table years of experience in implementing various types of interior design solutions in Serbia and abroad",
         "pageContent": "We bring to the table years of experience in implementing various types of interior design solutions in Serbia and abroad. We are fully aware that each project requires a unique and individualised process. By attentively listening to and immersing ourselves in our client’s vision and objectives, we are able to better fulfil their goals.Successful interior design projects are those that create a lasting positive impression on people that interact with spaces where they live, work, and play. BGS offers a full range of interior design services, from concept to detailed design and fit-out services. We are indeed a one-stop-shop. Building strong, long-lasting relationships with our clients is the cornerstone to successful interior design and fit-out projects.We sincerely believe that mutual respect and trust are the seeds of these relationships that, once nurtured, produce long lasting mutually beneficial relationships."
       },
       "service1": {
@@ -57,11 +57,11 @@
       "navText": "Home",
       "title": "THE LEADING INTERIOR DESIGN AND FIT OUT COMPANY IN SERBIA",
       "subtitle": "TURNING YOUR INTERIOR DESIGN DREAMS INTO REALITY",
-      "seoDescription": "text",
+      "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture",
       "sliderButton": "Discover",
       "stats": {
         "stat0": "Saving from our Value Engineering",
-        "stat1": "Hotel Rooms Executed",
+        "stat1": "Project Executed",
         "stat2": "Nationalities",
         "stat3": "Cumulative Years of Design Experience",
         "stat4": "Manufacturers in our Sourcing Database"
@@ -70,30 +70,30 @@
     "services": {
       "navText": "Services",
       "title": "Services",
-      "seoDescription": "text"
+      "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture"
     },
     "portfolio": {
       "navText": "Portfolio",
       "title": "Portfolio",
-      "seoDescription": "text"
+      "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture"
     },
     "about": {
       "navText": "About",
       "title": "About us",
-      "seoDescription": "text",
+      "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture",
       "content": "[\"BGS offers a full range of interior design services, from concept to detailed design and fit-out services. We are indeed a one-stop-shop.\",\"We do variety of turn key solutions in construction bussines. We have link departments BGS Fit out, and BGS System Line. (In house furniture production, wall and floor cladding, upholstery products variety of mock up solutions, MEP and HVAC system etc.)\",\"On the other hand we have Design department and Construction Management Department who deliver projects from initial design (including as built project) to hand over and manage on the site solutions. I think we are very good at supporting falling back projects.\",\"As we are familiar with local market, we give our clients the best service in Serbia. We also have abroad experience so we made sure we will follow some of wide spread trends in Fit Out market.\",\"The BGS idea is to have more than one System Line operating indipendantly from the rest of the system, so it can support also a different bussines ideas, as we are doing our best to improve our System Line experience and bring final solution to the table, supporting client needs.\",\"Feel free to share your ideas with us!\"]",
       "teamMembers": "[\"Member Name\",\"Member Name\",\"Member Name\",\"Member Name\",\"Member Name\",\"Member Name\",\"Member Name\"]"
     },
     "contact": {
       "navText": "Contact",
       "title": "Contact us",
-      "seoDescription": "text",
+      "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture",
       "text": "Contact page text",
       "mapMarkerPopup": "This message is shown when\nuser clicks on a map marker"
     },
     "404": {
       "title": "Page not found!",
-      "seoDescription": "text",
+      "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture",
       "message": "This page doesn't exist..."
     }
   }

@@ -8,6 +8,9 @@ module.exports = {
     author: `milos & milos`, //TODO
     siteUrl: `https://www.bgssystemline.com/`, //TODO
   },
+  // flags: {
+  //   FAST_DEV: true,
+  // },
   plugins: [
     {
       resolve: "gatsby-plugin-module-resolver",
