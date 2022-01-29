@@ -75,7 +75,8 @@
     "portfolio": {
       "navText": "Portfolio",
       "title": "Portfolio",
-      "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture"
+      "seoDescription": "Project Management, Turnkey Solutions, Interior Design, Architecture",
+      "project": "Project"
     },
     "about": {
       "navText": "About",

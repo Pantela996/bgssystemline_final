@@ -2925,7 +2925,7 @@ export type SiteTitleQueryQuery = { site?: { siteMetadata?: { title?: string | n
 export type GetPortfolioProjectsQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type GetPortfolioProjectsQuery = { allDirectory: { edges: Array<{ node: { name: string } }> } };
+export type GetPortfolioProjectsQuery = { allFile: { edges: Array<{ node: { name: string, relativeDirectory: string, childrenImageSharp?: Array<{ gatsbyImageData: any } | null | undefined> | null | undefined } }> } };
 
 export type GetServicesImagesQueryVariables = Exact<{ [key: string]: never; }>;
 

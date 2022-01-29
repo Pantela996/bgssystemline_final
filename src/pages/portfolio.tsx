@@ -1,26 +1,82 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import Seo from "../components/seo";
-import { Container } from "@mui/material";
+import { Container, styled } from "@mui/material";
 // @ts-ignore
 import t from "@translate";
 import Title from "../components/title";
+import { GetPortfolioProjectsQuery } from "../../graphql-types";
+import { GatsbyImage } from "gatsby-plugin-image";
 
-export default function Portfolio({ data }) {
-  // <GetPortfolioProjects>
-  // const folderData = useStaticQuery(graphql`
-  //   query getPortfolioProjects {
-  //     allDirectory(filter: { relativeDirectory: { eq: "portfolio" } }) {
-  //       edges {
-  //         node {
-  //           name
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+const projectImgHeight = 200;
+const projectWrapClass = "project__wrap";
+const projectImgClass = "project__img";
+const projectTextClass = "project__text";
+const ProjectsGrid = styled("div")(({ theme }) => ({
+  display: "grid",
+  gap: "1rem",
+  gridTemplateColumns: `repeat(auto-fit, minmax(${
+    projectImgHeight * 1.78
+  }px, 1fr))`,
+  gridAutoRows: `minmax(${projectImgHeight * 0.8}px, ${
+    projectImgHeight * 1.2
+  }px)`,
+  marginTop: theme.spacing(7),
+  [`& .${projectWrapClass}`]: {
+    position: "relative",
+    overflow: "hidden",
+  },
+  [`& .${projectImgClass}`]: {
+    width: "100%",
+    height: "100%",
+  },
+  [`& .${projectTextClass}`]: {
+    position: "absolute",
+    right: 0,
+    bottom: 0,
+    margin: 0,
+    color: "white",
+    fontWeight: "bold",
+    padding: theme.spacing(1),
+    background: `rgba(0,0,0,0.4)`,
+  },
+}));
 
-  console.log("portfolio folders", data);
+export const query = graphql`
+  query getPortfolioProjects {
+    allFile(filter: { relativeDirectory: { glob: "portfolio-projects/*" } }) {
+      edges {
+        node {
+          name
+          relativeDirectory
+          childrenImageSharp {
+            gatsbyImageData(placeholder: BLURRED, formats: WEBP)
+          }
+        }
+      }
+    }
+  }
+`;
+
+export default function Portfolio({
+  data,
+}: {
+  data: GetPortfolioProjectsQuery;
+}) {
+  const projectsObj = {};
+  data.allFile.edges.forEach(({ node }) => {
+    const projectsProperty = node.relativeDirectory.split("/")[1];
+    const imgData = node.childrenImageSharp[0].gatsbyImageData;
+    if (!projectsObj[projectsProperty]) {
+      projectsObj[projectsProperty] = [];
+    }
+    projectsObj[projectsProperty].push(imgData);
+  });
+  const projects = [];
+  for (const key in projectsObj) {
+    projects.push(projectsObj[key]);
+  }
+
   return (
     <div>
       <Seo
@@ -29,26 +85,25 @@ export default function Portfolio({ data }) {
       />
       <Container>
         <Title>{t("pages.portfolio.title")}</Title>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi
-          architecto eveniet pariatur impedit ad maiores commodi, perspiciatis,
-          vitae placeat dignissimos voluptate eligendi vel vero labore
-          repudiandae provident et reiciendis doloremque.
-        </p>
-        {/* Sto se samog portfolia tice, ja ne bih apostrofirao, kako je to bilo prethodno uradjeno, da je nesto dnevna soba ili kuhinja, vec bih pokusao ovako da imanujem projekte tipa kako je sad, ali zbog klijenata treba da sakrijem licna imena, prezimena itd. Neki od ovih rendera ce se u finalnoj fazi jos izbaciti, ali nece biti dodataka */}
+
+        <ProjectsGrid>
+          {projects.map((project, projectIndex) => (
+            <div className={projectWrapClass}>
+              <GatsbyImage
+                key={`project ${projectIndex + 1}`}
+                alt={`project ${projectIndex + 1}`}
+                className={projectImgClass}
+                image={project[0]}
+                objectFit="cover"
+                // objectPosition="50% 70%"
+              />
+              <p className={projectTextClass}>
+                {t("pages.portfolio.project")} {projectIndex + 1}
+              </p>
+            </div>
+          ))}
+        </ProjectsGrid>
       </Container>
     </div>
   );
 }
-
-export const query = graphql`
-  query getPortfolioProjects {
-    allDirectory(filter: { relativeDirectory: { eq: "portfolio-projects" } }) {
-      edges {
-        node {
-          name
-        }
-      }
-    }
-  }
-`;

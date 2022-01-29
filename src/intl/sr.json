@@ -75,13 +75,14 @@
     "portfolio": {
       "navText": "Портфолио",
       "title": "Портфолио",
-      "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура"
+      "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура",
+      "project": "Пројекат бр."
     },
     "about": {
       "navText": "О нама",
       "title": "О нама",
       "seoDescription": "Управљање пројектима, Кључ у руке израда ентеријера, Дизајн ентеријера, Архитектура",
-      "content": "[\"BGS offers a full range of interior design services, from concept to detailed design and fit-out services. We are indeed a one-stop-shop.\",\"We do variety of turn key solutions in construction bussines. We have link departments BGS Fit out, and BGS System Line. (In house furniture production, wall and floor cladding, upholstery products variety of mock up solutions, MEP and HVAC system etc.)\",\"On the other hand we have Design department and Construction Management Department who deliver projects from initial design (including as built project) to hand over and manage on the site solutions. I think we are very good at supporting falling back projects.\",\"As we are familiar with local market, we give our clients the best service in Serbia. We also have abroad experience so we made sure we will follow some of wide spread trends in Fit Out market.\",\"The BGS idea is to have more than one System Line operating indipendantly from the rest of the system, so it can support also a different bussines ideas, as we are doing our best to improve our System Line experience and bring final solution to the table, supporting client needs.\",\"Feel free to share your ideas with us!\"]",
+      "content": "[\"БГС вам нуди свеобухватне дизајнерске услуге, од концептуалног и детаљног дизајна до солуције кључ у руке. Ми смо one-stop-shop.\",\"Наши извођачи покривају широку лепезу завршних и радова сиве фазе. Наши повезани департмани су BGS Fit out и BGS System Line. (Производња намештаја по мери, подне и зидне облоге, тапацирунзи и тканине и показни амбијенти, MEP and HVAC системи.)\",\"Наши инжењери нуде услуге праћења пројеката од дизајна до реализације, израду пројеката на свим нивоима (такође пројекте изведеног стања) као и примпопредају и технички пријем пројеката. Ми смо тим коме можете да се обратите у случају кризне ситуације на пројекту.\",\"Премда смо упознати са локалним тржишним вредностима, нашем клијенту пружамо адекватну потпору на српском тржишту. Знање стечено у иностранству помогло нам је да се усредсредимо на модерне трендове у изради пројеката кључ у руке.\",\"Наша је примарна идеја да развијемо више системских целина које ће независно једна од друге, у складу са роковима и потребама клијената доносити солуције у маниру буџета и очекивања клијената.\", \"Слободно поделите ваше сугестије са нама!\"]",
       "teamMembers": "[\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\",\"Име члана\"]"
     },
     "contact": {
