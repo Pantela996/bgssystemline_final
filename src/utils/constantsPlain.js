@@ -5,7 +5,7 @@
 const serviceSlugs = [
   "interior-design",
   "furniture",
-  "modern-celling",
+  "modern-ceiling",
   "lighting-design",
   "wall-cladding",
 ];
