@@ -144,6 +144,7 @@ export const ExternalLinksWrap = styled("ul")(({ theme }) => ({
       transition: "background 200ms, color 200ms",
       background: theme.palette.primary.main,
       color: "black",
+      border: `1px solid ${theme.palette.primary.main}`,
 
       "&:hover": {
         background: "black",
