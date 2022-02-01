@@ -26,8 +26,8 @@ const ProjectsGrid = styled("div")(({ theme }) => ({
 }));
 
 const slideTransitionDuration = 1200;
-const swiperPaginationClass = "portfolio-swiper-pagination";
-const sliderSwiperClass = "portfolio-swiper-slider";
+const swiperPaginationClass = "swiper-pagination";
+const sliderSwiperClass = "swiper-slider";
 const SliderContainer = styled("div")(({ theme }) => ({
   width: "100%",
   height: "100%",
@@ -59,7 +59,7 @@ const SliderContainer = styled("div")(({ theme }) => ({
   [`& .${swiperPaginationClass}`]: {
     transform: "translateY(200%)",
     transition: "transform 400ms",
-    ".portfolio-swiper-pagination-bullet": {
+    ".swiper-pagination-bullet": {
       zIndex: 2,
       borderRadius: 0,
       width: "0.7em",

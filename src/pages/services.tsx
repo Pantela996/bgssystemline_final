@@ -19,7 +19,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 const sliderImgNames = [...serviceSlugs] as const;
 
 const slideTransitionDuration = 1200;
-const swiperPaginationClass = "services-swiper-pagination";
+const swiperPaginationClass = "swiper-pagination";
 const SliderContainer = styled("div")(({ theme }) => ({
   maxWidth: "100%",
   overflow: "hidden",
@@ -39,7 +39,7 @@ const SliderContainer = styled("div")(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
 
-    ".services-swiper-pagination-bullet": {
+    ".swiper-pagination-bullet": {
       position: "absolute",
       bottom: 0,
       left: "50%",
