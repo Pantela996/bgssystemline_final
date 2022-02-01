@@ -6,9 +6,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { GetSliderImagesQuery } from "../../../../graphql-types";
 // @ts-ignore
 import t from "@translate";
@@ -31,6 +28,7 @@ const SliderContainer = styled("div")(({ theme }) => ({
       margin: "0 0.3em !important",
       opacity: 1,
       background: "gray",
+      boxShadow: "inset 0 0 0.2em black",
       transition: "background 200ms, transform 200ms",
       transformOrigin: "center",
       position: "relative",
@@ -134,7 +132,7 @@ export default function Slider() {
         spaceBetween={33}
         speed={1200}
         autoplay={{
-          delay: 5500,
+          delay: 4500,
           disableOnInteraction: false,
         }}
         grabCursor={true}

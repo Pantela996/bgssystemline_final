@@ -7,9 +7,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import { Container } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import Title from "../components/title";
 // @ts-ignore
 import t from "@translate";
@@ -22,7 +19,7 @@ SwiperCore.use([Autoplay, Pagination, Navigation]);
 const sliderImgNames = [...serviceSlugs] as const;
 
 const slideTransitionDuration = 1200;
-const swiperPaginationClass = "swiper-pagination";
+const swiperPaginationClass = "services-swiper-pagination";
 const SliderContainer = styled("div")(({ theme }) => ({
   maxWidth: "100%",
   overflow: "hidden",
@@ -42,7 +39,7 @@ const SliderContainer = styled("div")(({ theme }) => ({
     display: "flex",
     flexDirection: "column",
 
-    ".swiper-pagination-bullet": {
+    ".services-swiper-pagination-bullet": {
       position: "absolute",
       bottom: 0,
       left: "50%",
@@ -132,7 +129,7 @@ function Slider({ servicesTitles }) {
         spaceBetween={33}
         speed={slideTransitionDuration}
         autoplay={{
-          delay: 5500,
+          delay: 4500,
           disableOnInteraction: false,
         }}
         grabCursor={true}
