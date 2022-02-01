@@ -141,13 +141,15 @@ export const ExternalLinksWrap = styled("ul")(({ theme }) => ({
       display: "inline-block",
       width: "100%",
       height: "100%",
-      transition: "background 200ms",
-      background: "gray",
+      transition: "background 200ms, color 200ms",
+      background: theme.palette.primary.main,
+      color: "black",
+
       "&:hover": {
-        background: theme.palette.primary.main,
+        background: "black",
+        color: theme.palette.primary.main,
       },
       "& > svg": {
-        color: "black",
         width: "100%",
         height: "100%",
       },
