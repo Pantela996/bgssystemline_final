@@ -90,6 +90,7 @@ export const Nav = styled("nav")(({ theme }) => ({
         transition: "transform 200ms ",
         margin: 0,
         position: "relative",
+        fontSize: "1.5rem",
         "&::before": {
           content: '""',
           display: "inline-block",

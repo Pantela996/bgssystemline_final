@@ -16,7 +16,8 @@ export const footerAreas = {
 const maxLogoWidth = "200px";
 export const ContentWrap = styled("main")(({ theme }) => ({
   display: "grid",
-  gap: "2rem",
+  gap: theme.spacing(4),
+  paddingBottom: theme.spacing(4),
   gridTemplateColumns: "1fr",
   gridTemplateAreas: `"${footerAreas.address}" "${footerAreas.links}" "${footerAreas.hours}" "${footerAreas.logo}"`,
   [theme.breakpoints.up("sm")]: {
@@ -113,11 +114,49 @@ export const Nav = styled("nav")(({ theme }) => ({
   },
 }));
 
-export const FooterOfFooter = styled("footer")(({ theme }) => ({
-  color: theme.palette.primary.main,
+const externalLinkSquareSize = 44;
+export const ExternalLinksWrap = styled("ul")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "center",
+  alignItems: "center",
   textAlign: "center",
-  marginTop: theme.spacing(4),
-  paddingTop: theme.spacing(3),
-  paddingBottom: theme.spacing(3),
+  margin: `${theme.spacing(4)} 0`,
+  padding: `${theme.spacing(4)} 0`,
   borderTop: `0.25rem double ${theme.palette.primary.main}`,
+  borderBottom: `0.25rem double ${theme.palette.primary.main}`,
+  listStyle: "none",
+
+  "& > li": {
+    display: "inline-block",
+    width: externalLinkSquareSize,
+    height: externalLinkSquareSize,
+    margin: 0,
+    padding: 0,
+    marginRight: theme.spacing(2),
+    "&:last-child": {
+      marginRight: 0,
+    },
+    "& > a": {
+      display: "inline-block",
+      width: "100%",
+      height: "100%",
+      transition: "background 200ms",
+      background: "gray",
+      "&:hover": {
+        background: theme.palette.primary.main,
+      },
+      "& > svg": {
+        color: "black",
+        width: "100%",
+        height: "100%",
+      },
+    },
+  },
+}));
+
+export const FooterOfFooter = styled("footer")(({ theme }) => ({
+  color: "gray" || theme.palette.primary.main,
+  textAlign: "center",
+  padding: `${theme.spacing(3)} 0`,
 }));

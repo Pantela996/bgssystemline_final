@@ -1,6 +1,10 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import { Container, Typography } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import PosterrizamSvg from "./posterrizamSvg";
 // @ts-ignore
 import t from "@translate";
 import { Link } from "gatsby-plugin-react-intl";
@@ -8,6 +12,7 @@ import { navLinks } from "../../utils/constants";
 import {
   ContentWrap,
   footerAreas,
+  ExternalLinksWrap,
   FooterOfFooter,
   FooterRoot,
   LogoWrap,
@@ -28,10 +33,6 @@ const Footer = () => {
     }
   `);
   const siteTitle = data.site.siteMetadata?.title || "";
-
-  // https://www.instagram.com/bgssystemline/
-  // https://www.linkedin.com/company/bgs-system-line/
-  // https://www.facebook.com/BGS-System-Line-113514583708281
 
   return (
     <FooterRoot>
@@ -96,6 +97,49 @@ const Footer = () => {
         </ContentWrap>
       </Container>
       <Container>
+        {/* // 
+  // 
+  // 
+  // 
+  // F, in, Insta ikonice u footeru stranice, ispod Bogdanovog email. Posterizam moze odmah pored toga. On nam je partner, saradnik tako da sta znam, ne bi bilo lose ako moze da se vidi njegov logo kao link. */}
+        <ExternalLinksWrap>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/bgs-system-line/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <LinkedInIcon />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/BGS-System-Line-113514583708281"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FacebookIcon />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/bgssystemline/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <InstagramIcon />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.posterrizam.com/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <PosterrizamSvg />
+            </a>
+          </li>
+        </ExternalLinksWrap>
         <FooterOfFooter>
           &copy; {new Date().getFullYear()} {siteTitle} |{" "}
           {t("global.footer.allRightsReserved")}

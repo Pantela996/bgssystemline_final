@@ -88,9 +88,11 @@ export default function Portfolio({
 
         <ProjectsGrid>
           {projects.map((project, projectIndex) => (
-            <div className={projectWrapClass}>
+            <div
+              className={projectWrapClass}
+              key={`project ${projectIndex + 1}`}
+            >
               <GatsbyImage
-                key={`project ${projectIndex + 1}`}
                 alt={`project ${projectIndex + 1}`}
                 className={projectImgClass}
                 image={project[0]}
