@@ -4,9 +4,6 @@ import { TransitionViews } from "gatsby-plugin-transitions";
 import CombinedProviders from "./combinedProviders";
 
 import "./layout.css";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Header from "./header";

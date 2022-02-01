@@ -7,8 +7,13 @@ import t from "@translate";
 import Title from "../components/title";
 import { GetPortfolioProjectsQuery } from "../../graphql-types";
 import { GatsbyImage } from "gatsby-plugin-image";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+
+SwiperCore.use([Autoplay, Pagination, Navigation]);
 
 const projectImgHeight = 200;
 const projectImgClass = "project__img";
@@ -140,10 +145,9 @@ export default function Portfolio({
 
         <ProjectsGrid>
           {projects.map((project, projectIndex) => (
-            <SliderContainer>
+            <SliderContainer key={`project ${projectIndex + 1}`}>
               <Swiper
                 className={sliderSwiperClass}
-                key={`project ${projectIndex + 1}`}
                 centeredSlides={true}
                 spaceBetween={3}
                 speed={slideTransitionDuration}
